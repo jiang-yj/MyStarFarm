@@ -1,0 +1,44 @@
+{
+  "crops": {
+    "carrot": {"name":"萝卜","icon":"carrot","seed":"carrotSeed","price":20,"sell":38,"duration":600000,"exp":5},
+    "corn": {"name":"玉米","icon":"corn","seed":"cornSeed","price":55,"sell":110,"duration":7200000,"exp":12},
+    "berry": {"name":"草莓","icon":"berry","seed":"berrySeed","price":35,"sell":68,"duration":1800000,"exp":8},
+    "ancient": {"name":"古代果实","icon":"ancient","seed":"ancientSeed","price":0,"sell":450,"duration":14400000,"exp":35}
+  },
+  "animals": {
+    "chicken": {"name":"小鸡","icon":"chicken","price":180,"product":"egg","duration":3600000,"sell":65},
+    "cow": {"name":"奶牛","icon":"cow","price":500,"product":"milk","duration":10800000,"sell":160}
+  },
+  "fish": {
+    "carp": {"name":"鲫鱼","icon":"fish","price":65,"sell":125,"duration":14400000},
+    "koi": {"name":"锦鲤","icon":"koi","price":150,"sell":280,"duration":14400000}
+  },
+  "items": {
+    "carrot":{"name":"萝卜","icon":"carrot","sell":38}, "corn":{"name":"玉米","icon":"corn","sell":110},
+    "berry":{"name":"草莓","icon":"berry","sell":68}, "ancient":{"name":"古代果实","icon":"ancient","sell":450},
+    "egg":{"name":"鸡蛋","icon":"egg","sell":65}, "milk":{"name":"牛奶","icon":"milk","sell":160},
+    "carp":{"name":"鲫鱼","icon":"fish","sell":125}, "koi":{"name":"锦鲤","icon":"koi","sell":280},
+    "carrotSeed":{"name":"萝卜种子","icon":"seed","sell":10}, "cornSeed":{"name":"玉米种子","icon":"seed","sell":27},
+    "berrySeed":{"name":"草莓种子","icon":"seed","sell":17}, "ancientSeed":{"name":"古代种子","icon":"ancientSeed","sell":0},
+    "hay":{"name":"饲料","icon":"hay","sell":2}, "carpFry":{"name":"鲫鱼苗","icon":"fish","sell":30},
+    "koiFry":{"name":"锦鲤苗","icon":"koi","sell":70}
+  },
+  "mystery": [
+    {"id":"ancientSeed","name":"古代种子","icon":"ancientSeed","price":8,"description":"种出沉睡于星光中的古代果实","kind":"item","amount":3},
+    {"id":"watering","name":"星陨水壶","icon":"water","price":20,"description":"全田浇水，成长用时再减 10%","kind":"tool","amount":1},
+    {"id":"sickle","name":"星陨镰刀","icon":"sickle","price":30,"description":"立即解锁一键收获全部成熟作物","kind":"tool","amount":1},
+    {"id":"koiFry","name":"星光锦鲤苗","icon":"koi","price":10,"description":"兑换 3 尾锦鲤苗，放入鱼塘养殖","kind":"item","amount":3},
+    {"id":"starlight","name":"星夜农场","icon":"star","price":15,"description":"解锁夜色地图装扮，可随时切换","kind":"skin","amount":1}
+  ],
+  "quests": [
+    {"id":"carrot","name":"新鲜的收获","npc":"花店阿禾","item":"carrot","count":6,"gold":140,"medals":3,"exp":20,"hours":24},
+    {"id":"egg","name":"早餐准备","npc":"面包师朵朵","item":"egg","count":3,"gold":180,"medals":4,"exp":25,"hours":24},
+    {"id":"carp","name":"池塘来信","npc":"钓鱼爷爷","item":"carp","count":2,"gold":220,"medals":4,"exp":25,"hours":48},
+    {"id":"corn","name":"金黄的午餐","npc":"小镇食堂","item":"corn","count":4,"gold":320,"medals":5,"exp":30,"hours":48},
+    {"id":"milk","name":"一杯暖牛奶","npc":"面包师朵朵","item":"milk","count":2,"gold":280,"medals":5,"exp":30,"hours":48}
+  ],
+  "economy": {"initialGold":1280,"initialMedals":0,"initialCarrotSeeds":12,"initialCornSeeds":5,"initialBerrySeeds":4,"initialHay":24,"hayPrice":5,"ranchCapacity":8,"initialPondCapacity":10,"pondUpgradeBase":400,"pondUpgradeSlots":5,"pondMaxCapacity":30,"tillCost":5,"feedCost":1,"fishingRewardExp":5,"maxInventory":9999,"maxGold":999999999},
+  "timing": {"offlineCap":14400000,"autosave":15000,"fishCooldown":60000,"petCooldown":3600000,"offlineNoticeMin":60000},
+  "grid": {"cols":20,"rows":15},
+  "progression": {"levelExp":100,"questMax":3,"petAffection":1,"qualitySilverAt":3,"qualityGoldAt":7,"silverMultiplier":1.25,"goldMultiplier":1.5}
+}

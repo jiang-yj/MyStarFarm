@@ -1,0 +1,4 @@
+{
+  "levels":[{"level":1,"threshold":0,"range":1,"timeMultiplier":1},{"level":2,"threshold":15,"range":3,"timeMultiplier":1},{"level":3,"threshold":45,"range":5,"timeMultiplier":0.9},{"level":4,"threshold":100,"range":9,"timeMultiplier":0.9}],
+  "harvestUnlockLevel":3
+}
