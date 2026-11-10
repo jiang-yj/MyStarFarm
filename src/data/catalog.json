@@ -1,44 +1,1679 @@
 {
   "crops": {
-    "carrot": {"name":"萝卜","icon":"carrot","seed":"carrotSeed","price":20,"sell":38,"duration":600000,"exp":5},
-    "corn": {"name":"玉米","icon":"corn","seed":"cornSeed","price":55,"sell":110,"duration":7200000,"exp":12},
-    "berry": {"name":"草莓","icon":"berry","seed":"berrySeed","price":35,"sell":68,"duration":1800000,"exp":8},
-    "ancient": {"name":"古代果实","icon":"ancient","seed":"ancientSeed","price":0,"sell":450,"duration":14400000,"exp":35}
+    "coffee": {
+      "name": "咖啡豆",
+      "icon": "crop-coffee",
+      "seedIcon": "crop-coffee",
+      "matureIcon": "crop-coffee-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "coffeeSeed",
+      "price": 20,
+      "sell": 40,
+      "duration": 600000,
+      "exp": 5,
+      "sourceRow": 4
+    },
+    "rice": {
+      "name": "未碾米",
+      "icon": "crop-rice",
+      "seedIcon": "crop-rice",
+      "matureIcon": "crop-rice-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "riceSeed",
+      "price": 25,
+      "sell": 50,
+      "duration": 600000,
+      "exp": 5,
+      "sourceRow": 5
+    },
+    "tulip": {
+      "name": "郁金香",
+      "icon": "crop-tulip",
+      "seedIcon": "crop-tulip",
+      "matureIcon": "crop-tulip-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "tulipSeed",
+      "price": 30,
+      "sell": 60,
+      "duration": 600000,
+      "exp": 5,
+      "sourceRow": 6
+    },
+    "parsnip": {
+      "name": "防风草",
+      "icon": "crop-parsnip",
+      "seedIcon": "crop-parsnip",
+      "matureIcon": "crop-parsnip-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "parsnipSeed",
+      "price": 35,
+      "sell": 70,
+      "duration": 600000,
+      "exp": 5,
+      "sourceRow": 7
+    },
+    "orangeCarrot": {
+      "name": "胡萝卜",
+      "icon": "crop-orangeCarrot",
+      "seedIcon": "crop-orangeCarrot",
+      "matureIcon": "crop-orangeCarrot-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "orangeCarrotSeed",
+      "price": 40,
+      "sell": 80,
+      "duration": 600000,
+      "exp": 6,
+      "sourceRow": 8
+    },
+    "greenBean": {
+      "name": "青豆",
+      "icon": "crop-greenBean",
+      "seedIcon": "crop-greenBean",
+      "matureIcon": "crop-greenBean-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "greenBeanSeed",
+      "price": 35,
+      "sell": 70,
+      "duration": 900000,
+      "exp": 6,
+      "sourceRow": 9
+    },
+    "blueJazz": {
+      "name": "蓝爵",
+      "icon": "crop-blueJazz",
+      "seedIcon": "crop-blueJazz",
+      "matureIcon": "crop-blueJazz-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "blueJazzSeed",
+      "price": 40,
+      "sell": 80,
+      "duration": 900000,
+      "exp": 6,
+      "sourceRow": 10
+    },
+    "garlic": {
+      "name": "蒜",
+      "icon": "crop-garlic",
+      "seedIcon": "crop-garlic",
+      "matureIcon": "crop-garlic-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "garlicSeed",
+      "price": 45,
+      "sell": 90,
+      "duration": 900000,
+      "exp": 6,
+      "sourceRow": 11
+    },
+    "potato": {
+      "name": "土豆",
+      "icon": "crop-potato",
+      "seedIcon": "crop-potato",
+      "matureIcon": "crop-potato-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "potatoSeed",
+      "price": 50,
+      "sell": 100,
+      "duration": 900000,
+      "exp": 7,
+      "sourceRow": 12
+    },
+    "kale": {
+      "name": "甘蓝菜",
+      "icon": "crop-kale",
+      "seedIcon": "crop-kale",
+      "matureIcon": "crop-kale-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "kaleSeed",
+      "price": 55,
+      "sell": 110,
+      "duration": 900000,
+      "exp": 7,
+      "sourceRow": 13
+    },
+    "berry": {
+      "name": "草莓",
+      "icon": "crop-berry",
+      "seedIcon": "crop-berry",
+      "matureIcon": "crop-berry-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "berrySeed",
+      "price": 35,
+      "sell": 68,
+      "duration": 1800000,
+      "exp": 8,
+      "sourceRow": 14
+    },
+    "cauliflower": {
+      "name": "花椰菜",
+      "icon": "crop-cauliflower",
+      "seedIcon": "crop-cauliflower",
+      "matureIcon": "crop-cauliflower-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "cauliflowerSeed",
+      "price": 55,
+      "sell": 110,
+      "duration": 1200000,
+      "exp": 7,
+      "sourceRow": 15
+    },
+    "rhubarb": {
+      "name": "大黄",
+      "icon": "crop-rhubarb",
+      "seedIcon": "crop-rhubarb",
+      "matureIcon": "crop-rhubarb-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "rhubarbSeed",
+      "price": 60,
+      "sell": 120,
+      "duration": 1200000,
+      "exp": 8,
+      "sourceRow": 16
+    },
+    "ancient": {
+      "name": "上古水果",
+      "icon": "crop-ancient",
+      "seedIcon": "crop-ancient",
+      "matureIcon": "crop-ancient-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "ancientSeed",
+      "price": 0,
+      "sell": 450,
+      "duration": 14400000,
+      "exp": 35,
+      "sourceRow": 17
+    },
+    "hops": {
+      "name": "啤酒花",
+      "icon": "crop-hops",
+      "seedIcon": "crop-hops",
+      "matureIcon": "crop-hops-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "hopsSeed",
+      "price": 70,
+      "sell": 140,
+      "duration": 1200000,
+      "exp": 8,
+      "sourceRow": 18
+    },
+    "wheat": {
+      "name": "小麦",
+      "icon": "crop-wheat",
+      "seedIcon": "crop-wheat",
+      "matureIcon": "crop-wheat-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "wheatSeed",
+      "price": 65,
+      "sell": 130,
+      "duration": 1800000,
+      "exp": 8,
+      "sourceRow": 19
+    },
+    "pepper": {
+      "name": "辣椒",
+      "icon": "crop-pepper",
+      "seedIcon": "crop-pepper",
+      "matureIcon": "crop-pepper-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "pepperSeed",
+      "price": 70,
+      "sell": 140,
+      "duration": 1800000,
+      "exp": 9,
+      "sourceRow": 20
+    },
+    "summerSquash": {
+      "name": "金皮西葫芦",
+      "icon": "crop-summerSquash",
+      "seedIcon": "crop-summerSquash",
+      "matureIcon": "crop-summerSquash-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "summerSquashSeed",
+      "price": 75,
+      "sell": 150,
+      "duration": 1800000,
+      "exp": 9,
+      "sourceRow": 21
+    },
+    "blueberry": {
+      "name": "蓝莓",
+      "icon": "crop-blueberry",
+      "seedIcon": "crop-blueberry",
+      "matureIcon": "crop-blueberry-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "blueberrySeed",
+      "price": 80,
+      "sell": 160,
+      "duration": 1800000,
+      "exp": 9,
+      "sourceRow": 22
+    },
+    "corn": {
+      "name": "玉米",
+      "icon": "crop-corn",
+      "seedIcon": "crop-corn",
+      "matureIcon": "crop-corn-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "cornSeed",
+      "price": 55,
+      "sell": 110,
+      "duration": 7200000,
+      "exp": 12,
+      "sourceRow": 23
+    },
+    "tomato": {
+      "name": "西红柿",
+      "icon": "crop-tomato",
+      "seedIcon": "crop-tomato",
+      "matureIcon": "crop-tomato-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "tomatoSeed",
+      "price": 80,
+      "sell": 160,
+      "duration": 2700000,
+      "exp": 10,
+      "sourceRow": 24
+    },
+    "sunflower": {
+      "name": "向日葵",
+      "icon": "crop-sunflower",
+      "seedIcon": "crop-sunflower",
+      "matureIcon": "crop-sunflower-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "sunflowerSeed",
+      "price": 85,
+      "sell": 170,
+      "duration": 2700000,
+      "exp": 10,
+      "sourceRow": 25
+    },
+    "carrot": {
+      "name": "萝卜",
+      "icon": "crop-carrot",
+      "seedIcon": "crop-carrot",
+      "matureIcon": "crop-carrot-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "carrotSeed",
+      "price": 20,
+      "sell": 38,
+      "duration": 600000,
+      "exp": 5,
+      "sourceRow": 26
+    },
+    "summerSpangle": {
+      "name": "夏季亮片",
+      "icon": "crop-summerSpangle",
+      "seedIcon": "crop-summerSpangle",
+      "matureIcon": "crop-summerSpangle-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "summerSpangleSeed",
+      "price": 95,
+      "sell": 190,
+      "duration": 2700000,
+      "exp": 10,
+      "sourceRow": 27
+    },
+    "taro": {
+      "name": "芋头",
+      "icon": "crop-taro",
+      "seedIcon": "crop-taro",
+      "matureIcon": "crop-taro-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "taroSeed",
+      "price": 100,
+      "sell": 200,
+      "duration": 2700000,
+      "exp": 11,
+      "sourceRow": 28
+    },
+    "poppy": {
+      "name": "虞美人花",
+      "icon": "crop-poppy",
+      "seedIcon": "crop-poppy",
+      "matureIcon": "crop-poppy-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "poppySeed",
+      "price": 95,
+      "sell": 190,
+      "duration": 3600000,
+      "exp": 11,
+      "sourceRow": 29
+    },
+    "melon": {
+      "name": "甜瓜",
+      "icon": "crop-melon",
+      "seedIcon": "crop-melon",
+      "matureIcon": "crop-melon-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "melonSeed",
+      "price": 100,
+      "sell": 200,
+      "duration": 3600000,
+      "exp": 11,
+      "sourceRow": 30
+    },
+    "redCabbage": {
+      "name": "红叶卷心菜",
+      "icon": "crop-redCabbage",
+      "seedIcon": "crop-redCabbage",
+      "matureIcon": "crop-redCabbage-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "redCabbageSeed",
+      "price": 105,
+      "sell": 210,
+      "duration": 3600000,
+      "exp": 11,
+      "sourceRow": 31
+    },
+    "starfruit": {
+      "name": "杨桃",
+      "icon": "crop-starfruit",
+      "seedIcon": "crop-starfruit",
+      "matureIcon": "crop-starfruit-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "starfruitSeed",
+      "price": 110,
+      "sell": 220,
+      "duration": 3600000,
+      "exp": 12,
+      "sourceRow": 32
+    },
+    "eggplant": {
+      "name": "茄子",
+      "icon": "crop-eggplant",
+      "seedIcon": "crop-eggplant",
+      "matureIcon": "crop-eggplant-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "eggplantSeed",
+      "price": 115,
+      "sell": 230,
+      "duration": 3600000,
+      "exp": 12,
+      "sourceRow": 33
+    },
+    "broccoli": {
+      "name": "西蓝花",
+      "icon": "crop-broccoli",
+      "seedIcon": "crop-broccoli",
+      "matureIcon": "crop-broccoli-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "broccoliSeed",
+      "price": 110,
+      "sell": 220,
+      "duration": 5400000,
+      "exp": 12,
+      "sourceRow": 34
+    },
+    "cranberry": {
+      "name": "蔓越莓",
+      "icon": "crop-cranberry",
+      "seedIcon": "crop-cranberry",
+      "matureIcon": "crop-cranberry-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "cranberrySeed",
+      "price": 115,
+      "sell": 230,
+      "duration": 5400000,
+      "exp": 12,
+      "sourceRow": 35
+    },
+    "grape": {
+      "name": "葡萄",
+      "icon": "crop-grape",
+      "seedIcon": "crop-grape",
+      "matureIcon": "crop-grape-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "grapeSeed",
+      "price": 120,
+      "sell": 240,
+      "duration": 5400000,
+      "exp": 13,
+      "sourceRow": 36
+    },
+    "bokChoy": {
+      "name": "小白菜",
+      "icon": "crop-bokChoy",
+      "seedIcon": "crop-bokChoy",
+      "matureIcon": "crop-bokChoy-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "bokChoySeed",
+      "price": 125,
+      "sell": 250,
+      "duration": 5400000,
+      "exp": 13,
+      "sourceRow": 37
+    },
+    "beet": {
+      "name": "甜菜",
+      "icon": "crop-beet",
+      "seedIcon": "crop-beet",
+      "matureIcon": "crop-beet-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "beetSeed",
+      "price": 130,
+      "sell": 260,
+      "duration": 5400000,
+      "exp": 13,
+      "sourceRow": 38
+    },
+    "amaranth": {
+      "name": "苋菜",
+      "icon": "crop-amaranth",
+      "seedIcon": "crop-amaranth",
+      "matureIcon": "crop-amaranth-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "amaranthSeed",
+      "price": 125,
+      "sell": 250,
+      "duration": 7200000,
+      "exp": 13,
+      "sourceRow": 39
+    },
+    "yam": {
+      "name": "山药",
+      "icon": "crop-yam",
+      "seedIcon": "crop-yam",
+      "matureIcon": "crop-yam-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "yamSeed",
+      "price": 130,
+      "sell": 260,
+      "duration": 7200000,
+      "exp": 14,
+      "sourceRow": 40
+    },
+    "artichoke": {
+      "name": "洋蓟",
+      "icon": "crop-artichoke",
+      "seedIcon": "crop-artichoke",
+      "matureIcon": "crop-artichoke-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "artichokeSeed",
+      "price": 135,
+      "sell": 270,
+      "duration": 7200000,
+      "exp": 14,
+      "sourceRow": 41
+    },
+    "fairyRose": {
+      "name": "玫瑰仙子",
+      "icon": "crop-fairyRose",
+      "seedIcon": "crop-fairyRose",
+      "matureIcon": "crop-fairyRose-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "fairyRoseSeed",
+      "price": 140,
+      "sell": 280,
+      "duration": 7200000,
+      "exp": 14,
+      "sourceRow": 42
+    },
+    "pumpkin": {
+      "name": "南瓜",
+      "icon": "crop-pumpkin",
+      "seedIcon": "crop-pumpkin",
+      "matureIcon": "crop-pumpkin-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "pumpkinSeed",
+      "price": 145,
+      "sell": 290,
+      "duration": 7200000,
+      "exp": 14,
+      "sourceRow": 43
+    },
+    "sweetGemBerry": {
+      "name": "宝石甜莓",
+      "icon": "crop-sweetGemBerry",
+      "seedIcon": "crop-sweetGemBerry",
+      "matureIcon": "crop-sweetGemBerry-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "sweetGemBerrySeed",
+      "price": 140,
+      "sell": 280,
+      "duration": 10800000,
+      "exp": 15,
+      "sourceRow": 44
+    },
+    "powdermelon": {
+      "name": "霜瓜",
+      "icon": "crop-powdermelon",
+      "seedIcon": "crop-powdermelon",
+      "matureIcon": "crop-powdermelon-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "powdermelonSeed",
+      "price": 145,
+      "sell": 290,
+      "duration": 10800000,
+      "exp": 15,
+      "sourceRow": 45
+    },
+    "qiFruit": {
+      "name": "齐瓜",
+      "icon": "crop-qiFruit",
+      "seedIcon": "crop-qiFruit",
+      "matureIcon": "crop-qiFruit-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "qiFruitSeed",
+      "price": 150,
+      "sell": 300,
+      "duration": 10800000,
+      "exp": 15,
+      "sourceRow": 46
+    },
+    "tea": {
+      "name": "茶叶",
+      "icon": "crop-tea",
+      "seedIcon": "crop-tea",
+      "matureIcon": "crop-tea-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "teaSeed",
+      "price": 155,
+      "sell": 310,
+      "duration": 10800000,
+      "exp": 15,
+      "sourceRow": 47
+    },
+    "cactusFruit": {
+      "name": "仙人掌果子",
+      "icon": "crop-cactusFruit",
+      "seedIcon": "crop-cactusFruit",
+      "matureIcon": "crop-cactusFruit-mature",
+      "sproutIcon": "workbook-sprout",
+      "seed": "cactusFruitSeed",
+      "price": 160,
+      "sell": 320,
+      "duration": 10800000,
+      "exp": 16,
+      "sourceRow": 48
+    }
   },
   "animals": {
-    "chicken": {"name":"小鸡","icon":"chicken","price":180,"product":"egg","duration":3600000,"sell":65},
-    "cow": {"name":"奶牛","icon":"cow","price":500,"product":"milk","duration":10800000,"sell":160}
+    "chicken": {
+      "name": "鸡",
+      "icon": "animal-chicken",
+      "price": 180,
+      "product": "egg",
+      "duration": 3600000,
+      "sell": 65
+    },
+    "duck": {
+      "name": "鸭",
+      "icon": "animal-duck",
+      "price": 260,
+      "product": "duckEgg",
+      "duration": 3600000,
+      "sell": 85
+    },
+    "rabbit": {
+      "name": "兔子",
+      "icon": "animal-rabbit",
+      "price": 420,
+      "product": "rabbitFur",
+      "duration": 7200000,
+      "sell": 130
+    },
+    "cow": {
+      "name": "牛",
+      "icon": "animal-cow",
+      "price": 500,
+      "product": "milk",
+      "duration": 10800000,
+      "sell": 160
+    },
+    "sheep": {
+      "name": "绵羊",
+      "icon": "animal-sheep",
+      "price": 600,
+      "product": "wool",
+      "duration": 10800000,
+      "sell": 150
+    },
+    "pig": {
+      "name": "猪",
+      "icon": "animal-pig",
+      "price": 850,
+      "product": "truffle",
+      "duration": 14400000,
+      "sell": 220
+    },
+    "voidChicken": {
+      "name": "虚空鸡",
+      "icon": "animal-voidChicken",
+      "price": 1000,
+      "product": "voidEgg",
+      "duration": 14400000,
+      "sell": 200
+    }
   },
   "fish": {
-    "carp": {"name":"鲫鱼","icon":"fish","price":65,"sell":125,"duration":14400000},
-    "koi": {"name":"锦鲤","icon":"koi","price":150,"sell":280,"duration":14400000}
+    "commonCarp": {
+      "name": "鲤鱼",
+      "icon": "fish-commonCarp",
+      "price": 65,
+      "sell": 130,
+      "duration": 14400000
+    },
+    "herring": {
+      "name": "鲱鱼",
+      "icon": "fish-herring",
+      "price": 75,
+      "sell": 150,
+      "duration": 14400000
+    },
+    "smallmouthBass": {
+      "name": "小嘴鲈鱼",
+      "icon": "fish-smallmouthBass",
+      "price": 85,
+      "sell": 170,
+      "duration": 14400000
+    },
+    "anchovy": {
+      "name": "鳀鱼",
+      "icon": "fish-anchovy",
+      "price": 95,
+      "sell": 190,
+      "duration": 14400000
+    },
+    "sunfish": {
+      "name": "太阳鱼",
+      "icon": "fish-sunfish",
+      "price": 105,
+      "sell": 210,
+      "duration": 14400000
+    },
+    "sardine": {
+      "name": "沙丁鱼",
+      "icon": "fish-sardine",
+      "price": 115,
+      "sell": 230,
+      "duration": 14400000
+    },
+    "redSnapper": {
+      "name": "鲷鱼",
+      "icon": "fish-redSnapper",
+      "price": 125,
+      "sell": 250,
+      "duration": 14400000
+    },
+    "silverCarp": {
+      "name": "鲢鱼",
+      "icon": "fish-silverCarp",
+      "price": 135,
+      "sell": 270,
+      "duration": 14400000
+    },
+    "shad": {
+      "name": "西鲱",
+      "icon": "fish-shad",
+      "price": 145,
+      "sell": 290,
+      "duration": 14400000
+    },
+    "bullhead": {
+      "name": "大头鱼",
+      "icon": "fish-bullhead",
+      "price": 155,
+      "sell": 310,
+      "duration": 14400000
+    },
+    "largemouthBass": {
+      "name": "大嘴鲈鱼",
+      "icon": "fish-largemouthBass",
+      "price": 165,
+      "sell": 330,
+      "duration": 14400000
+    },
+    "ghostfish": {
+      "name": "鬼鱼",
+      "icon": "fish-ghostfish",
+      "price": 175,
+      "sell": 350,
+      "duration": 14400000
+    },
+    "halibut": {
+      "name": "大比目鱼",
+      "icon": "fish-halibut",
+      "price": 185,
+      "sell": 370,
+      "duration": 14400000
+    },
+    "woodskip": {
+      "name": "木跃鱼",
+      "icon": "fish-woodskip",
+      "price": 195,
+      "sell": 390,
+      "duration": 14400000
+    },
+    "flounder": {
+      "name": "比目鱼",
+      "icon": "fish-flounder",
+      "price": 205,
+      "sell": 410,
+      "duration": 14400000
+    },
+    "legend": {
+      "name": "传说之鱼",
+      "icon": "fish-legend",
+      "price": 215,
+      "sell": 430,
+      "duration": 14400000
+    }
   },
   "items": {
-    "carrot":{"name":"萝卜","icon":"carrot","sell":38}, "corn":{"name":"玉米","icon":"corn","sell":110},
-    "berry":{"name":"草莓","icon":"berry","sell":68}, "ancient":{"name":"古代果实","icon":"ancient","sell":450},
-    "egg":{"name":"鸡蛋","icon":"egg","sell":65}, "milk":{"name":"牛奶","icon":"milk","sell":160},
-    "carp":{"name":"鲫鱼","icon":"fish","sell":125}, "koi":{"name":"锦鲤","icon":"koi","sell":280},
-    "carrotSeed":{"name":"萝卜种子","icon":"seed","sell":10}, "cornSeed":{"name":"玉米种子","icon":"seed","sell":27},
-    "berrySeed":{"name":"草莓种子","icon":"seed","sell":17}, "ancientSeed":{"name":"古代种子","icon":"ancientSeed","sell":0},
-    "hay":{"name":"饲料","icon":"hay","sell":2}, "carpFry":{"name":"鲫鱼苗","icon":"fish","sell":30},
-    "koiFry":{"name":"锦鲤苗","icon":"koi","sell":70}
+    "coffee": {
+      "name": "咖啡豆",
+      "icon": "crop-coffee",
+      "sell": 40
+    },
+    "coffeeSeed": {
+      "name": "咖啡豆种子",
+      "icon": "crop-coffee",
+      "sell": 10
+    },
+    "rice": {
+      "name": "未碾米",
+      "icon": "crop-rice",
+      "sell": 50
+    },
+    "riceSeed": {
+      "name": "未碾米种子",
+      "icon": "crop-rice",
+      "sell": 12
+    },
+    "tulip": {
+      "name": "郁金香",
+      "icon": "crop-tulip",
+      "sell": 60
+    },
+    "tulipSeed": {
+      "name": "郁金香种子",
+      "icon": "crop-tulip",
+      "sell": 15
+    },
+    "parsnip": {
+      "name": "防风草",
+      "icon": "crop-parsnip",
+      "sell": 70
+    },
+    "parsnipSeed": {
+      "name": "防风草种子",
+      "icon": "crop-parsnip",
+      "sell": 17
+    },
+    "orangeCarrot": {
+      "name": "胡萝卜",
+      "icon": "crop-orangeCarrot",
+      "sell": 80
+    },
+    "orangeCarrotSeed": {
+      "name": "胡萝卜种子",
+      "icon": "crop-orangeCarrot",
+      "sell": 20
+    },
+    "greenBean": {
+      "name": "青豆",
+      "icon": "crop-greenBean",
+      "sell": 70
+    },
+    "greenBeanSeed": {
+      "name": "青豆种子",
+      "icon": "crop-greenBean",
+      "sell": 17
+    },
+    "blueJazz": {
+      "name": "蓝爵",
+      "icon": "crop-blueJazz",
+      "sell": 80
+    },
+    "blueJazzSeed": {
+      "name": "蓝爵种子",
+      "icon": "crop-blueJazz",
+      "sell": 20
+    },
+    "garlic": {
+      "name": "蒜",
+      "icon": "crop-garlic",
+      "sell": 90
+    },
+    "garlicSeed": {
+      "name": "蒜种子",
+      "icon": "crop-garlic",
+      "sell": 22
+    },
+    "potato": {
+      "name": "土豆",
+      "icon": "crop-potato",
+      "sell": 100
+    },
+    "potatoSeed": {
+      "name": "土豆种子",
+      "icon": "crop-potato",
+      "sell": 25
+    },
+    "kale": {
+      "name": "甘蓝菜",
+      "icon": "crop-kale",
+      "sell": 110
+    },
+    "kaleSeed": {
+      "name": "甘蓝菜种子",
+      "icon": "crop-kale",
+      "sell": 27
+    },
+    "berry": {
+      "name": "草莓",
+      "icon": "crop-berry",
+      "sell": 68
+    },
+    "berrySeed": {
+      "name": "草莓种子",
+      "icon": "crop-berry",
+      "sell": 17
+    },
+    "cauliflower": {
+      "name": "花椰菜",
+      "icon": "crop-cauliflower",
+      "sell": 110
+    },
+    "cauliflowerSeed": {
+      "name": "花椰菜种子",
+      "icon": "crop-cauliflower",
+      "sell": 27
+    },
+    "rhubarb": {
+      "name": "大黄",
+      "icon": "crop-rhubarb",
+      "sell": 120
+    },
+    "rhubarbSeed": {
+      "name": "大黄种子",
+      "icon": "crop-rhubarb",
+      "sell": 30
+    },
+    "ancient": {
+      "name": "上古水果",
+      "icon": "crop-ancient",
+      "sell": 450
+    },
+    "ancientSeed": {
+      "name": "上古水果种子",
+      "icon": "crop-ancient",
+      "sell": 0
+    },
+    "hops": {
+      "name": "啤酒花",
+      "icon": "crop-hops",
+      "sell": 140
+    },
+    "hopsSeed": {
+      "name": "啤酒花种子",
+      "icon": "crop-hops",
+      "sell": 35
+    },
+    "wheat": {
+      "name": "小麦",
+      "icon": "crop-wheat",
+      "sell": 130
+    },
+    "wheatSeed": {
+      "name": "小麦种子",
+      "icon": "crop-wheat",
+      "sell": 32
+    },
+    "pepper": {
+      "name": "辣椒",
+      "icon": "crop-pepper",
+      "sell": 140
+    },
+    "pepperSeed": {
+      "name": "辣椒种子",
+      "icon": "crop-pepper",
+      "sell": 35
+    },
+    "summerSquash": {
+      "name": "金皮西葫芦",
+      "icon": "crop-summerSquash",
+      "sell": 150
+    },
+    "summerSquashSeed": {
+      "name": "金皮西葫芦种子",
+      "icon": "crop-summerSquash",
+      "sell": 37
+    },
+    "blueberry": {
+      "name": "蓝莓",
+      "icon": "crop-blueberry",
+      "sell": 160
+    },
+    "blueberrySeed": {
+      "name": "蓝莓种子",
+      "icon": "crop-blueberry",
+      "sell": 40
+    },
+    "corn": {
+      "name": "玉米",
+      "icon": "crop-corn",
+      "sell": 110
+    },
+    "cornSeed": {
+      "name": "玉米种子",
+      "icon": "crop-corn",
+      "sell": 27
+    },
+    "tomato": {
+      "name": "西红柿",
+      "icon": "crop-tomato",
+      "sell": 160
+    },
+    "tomatoSeed": {
+      "name": "西红柿种子",
+      "icon": "crop-tomato",
+      "sell": 40
+    },
+    "sunflower": {
+      "name": "向日葵",
+      "icon": "crop-sunflower",
+      "sell": 170
+    },
+    "sunflowerSeed": {
+      "name": "向日葵种子",
+      "icon": "crop-sunflower",
+      "sell": 42
+    },
+    "carrot": {
+      "name": "萝卜",
+      "icon": "crop-carrot",
+      "sell": 38
+    },
+    "carrotSeed": {
+      "name": "萝卜种子",
+      "icon": "crop-carrot",
+      "sell": 10
+    },
+    "summerSpangle": {
+      "name": "夏季亮片",
+      "icon": "crop-summerSpangle",
+      "sell": 190
+    },
+    "summerSpangleSeed": {
+      "name": "夏季亮片种子",
+      "icon": "crop-summerSpangle",
+      "sell": 47
+    },
+    "taro": {
+      "name": "芋头",
+      "icon": "crop-taro",
+      "sell": 200
+    },
+    "taroSeed": {
+      "name": "芋头种子",
+      "icon": "crop-taro",
+      "sell": 50
+    },
+    "poppy": {
+      "name": "虞美人花",
+      "icon": "crop-poppy",
+      "sell": 190
+    },
+    "poppySeed": {
+      "name": "虞美人花种子",
+      "icon": "crop-poppy",
+      "sell": 47
+    },
+    "melon": {
+      "name": "甜瓜",
+      "icon": "crop-melon",
+      "sell": 200
+    },
+    "melonSeed": {
+      "name": "甜瓜种子",
+      "icon": "crop-melon",
+      "sell": 50
+    },
+    "redCabbage": {
+      "name": "红叶卷心菜",
+      "icon": "crop-redCabbage",
+      "sell": 210
+    },
+    "redCabbageSeed": {
+      "name": "红叶卷心菜种子",
+      "icon": "crop-redCabbage",
+      "sell": 52
+    },
+    "starfruit": {
+      "name": "杨桃",
+      "icon": "crop-starfruit",
+      "sell": 220
+    },
+    "starfruitSeed": {
+      "name": "杨桃种子",
+      "icon": "crop-starfruit",
+      "sell": 55
+    },
+    "eggplant": {
+      "name": "茄子",
+      "icon": "crop-eggplant",
+      "sell": 230
+    },
+    "eggplantSeed": {
+      "name": "茄子种子",
+      "icon": "crop-eggplant",
+      "sell": 57
+    },
+    "broccoli": {
+      "name": "西蓝花",
+      "icon": "crop-broccoli",
+      "sell": 220
+    },
+    "broccoliSeed": {
+      "name": "西蓝花种子",
+      "icon": "crop-broccoli",
+      "sell": 55
+    },
+    "cranberry": {
+      "name": "蔓越莓",
+      "icon": "crop-cranberry",
+      "sell": 230
+    },
+    "cranberrySeed": {
+      "name": "蔓越莓种子",
+      "icon": "crop-cranberry",
+      "sell": 57
+    },
+    "grape": {
+      "name": "葡萄",
+      "icon": "crop-grape",
+      "sell": 240
+    },
+    "grapeSeed": {
+      "name": "葡萄种子",
+      "icon": "crop-grape",
+      "sell": 60
+    },
+    "bokChoy": {
+      "name": "小白菜",
+      "icon": "crop-bokChoy",
+      "sell": 250
+    },
+    "bokChoySeed": {
+      "name": "小白菜种子",
+      "icon": "crop-bokChoy",
+      "sell": 62
+    },
+    "beet": {
+      "name": "甜菜",
+      "icon": "crop-beet",
+      "sell": 260
+    },
+    "beetSeed": {
+      "name": "甜菜种子",
+      "icon": "crop-beet",
+      "sell": 65
+    },
+    "amaranth": {
+      "name": "苋菜",
+      "icon": "crop-amaranth",
+      "sell": 250
+    },
+    "amaranthSeed": {
+      "name": "苋菜种子",
+      "icon": "crop-amaranth",
+      "sell": 62
+    },
+    "yam": {
+      "name": "山药",
+      "icon": "crop-yam",
+      "sell": 260
+    },
+    "yamSeed": {
+      "name": "山药种子",
+      "icon": "crop-yam",
+      "sell": 65
+    },
+    "artichoke": {
+      "name": "洋蓟",
+      "icon": "crop-artichoke",
+      "sell": 270
+    },
+    "artichokeSeed": {
+      "name": "洋蓟种子",
+      "icon": "crop-artichoke",
+      "sell": 67
+    },
+    "fairyRose": {
+      "name": "玫瑰仙子",
+      "icon": "crop-fairyRose",
+      "sell": 280
+    },
+    "fairyRoseSeed": {
+      "name": "玫瑰仙子种子",
+      "icon": "crop-fairyRose",
+      "sell": 70
+    },
+    "pumpkin": {
+      "name": "南瓜",
+      "icon": "crop-pumpkin",
+      "sell": 290
+    },
+    "pumpkinSeed": {
+      "name": "南瓜种子",
+      "icon": "crop-pumpkin",
+      "sell": 72
+    },
+    "sweetGemBerry": {
+      "name": "宝石甜莓",
+      "icon": "crop-sweetGemBerry",
+      "sell": 280
+    },
+    "sweetGemBerrySeed": {
+      "name": "宝石甜莓种子",
+      "icon": "crop-sweetGemBerry",
+      "sell": 70
+    },
+    "powdermelon": {
+      "name": "霜瓜",
+      "icon": "crop-powdermelon",
+      "sell": 290
+    },
+    "powdermelonSeed": {
+      "name": "霜瓜种子",
+      "icon": "crop-powdermelon",
+      "sell": 72
+    },
+    "qiFruit": {
+      "name": "齐瓜",
+      "icon": "crop-qiFruit",
+      "sell": 300
+    },
+    "qiFruitSeed": {
+      "name": "齐瓜种子",
+      "icon": "crop-qiFruit",
+      "sell": 75
+    },
+    "tea": {
+      "name": "茶叶",
+      "icon": "crop-tea",
+      "sell": 310
+    },
+    "teaSeed": {
+      "name": "茶叶种子",
+      "icon": "crop-tea",
+      "sell": 77
+    },
+    "cactusFruit": {
+      "name": "仙人掌果子",
+      "icon": "crop-cactusFruit",
+      "sell": 320
+    },
+    "cactusFruitSeed": {
+      "name": "仙人掌果子种子",
+      "icon": "crop-cactusFruit",
+      "sell": 80
+    },
+    "commonCarp": {
+      "name": "鲤鱼",
+      "icon": "fish-commonCarp",
+      "sell": 130
+    },
+    "commonCarpFry": {
+      "name": "鲤鱼苗",
+      "icon": "fish-commonCarp",
+      "sell": 32
+    },
+    "herring": {
+      "name": "鲱鱼",
+      "icon": "fish-herring",
+      "sell": 150
+    },
+    "herringFry": {
+      "name": "鲱鱼苗",
+      "icon": "fish-herring",
+      "sell": 37
+    },
+    "smallmouthBass": {
+      "name": "小嘴鲈鱼",
+      "icon": "fish-smallmouthBass",
+      "sell": 170
+    },
+    "smallmouthBassFry": {
+      "name": "小嘴鲈鱼苗",
+      "icon": "fish-smallmouthBass",
+      "sell": 42
+    },
+    "anchovy": {
+      "name": "鳀鱼",
+      "icon": "fish-anchovy",
+      "sell": 190
+    },
+    "anchovyFry": {
+      "name": "鳀鱼苗",
+      "icon": "fish-anchovy",
+      "sell": 47
+    },
+    "sunfish": {
+      "name": "太阳鱼",
+      "icon": "fish-sunfish",
+      "sell": 210
+    },
+    "sunfishFry": {
+      "name": "太阳鱼苗",
+      "icon": "fish-sunfish",
+      "sell": 52
+    },
+    "sardine": {
+      "name": "沙丁鱼",
+      "icon": "fish-sardine",
+      "sell": 230
+    },
+    "sardineFry": {
+      "name": "沙丁鱼苗",
+      "icon": "fish-sardine",
+      "sell": 57
+    },
+    "redSnapper": {
+      "name": "鲷鱼",
+      "icon": "fish-redSnapper",
+      "sell": 250
+    },
+    "redSnapperFry": {
+      "name": "鲷鱼苗",
+      "icon": "fish-redSnapper",
+      "sell": 62
+    },
+    "silverCarp": {
+      "name": "鲢鱼",
+      "icon": "fish-silverCarp",
+      "sell": 270
+    },
+    "silverCarpFry": {
+      "name": "鲢鱼苗",
+      "icon": "fish-silverCarp",
+      "sell": 67
+    },
+    "shad": {
+      "name": "西鲱",
+      "icon": "fish-shad",
+      "sell": 290
+    },
+    "shadFry": {
+      "name": "西鲱苗",
+      "icon": "fish-shad",
+      "sell": 72
+    },
+    "bullhead": {
+      "name": "大头鱼",
+      "icon": "fish-bullhead",
+      "sell": 310
+    },
+    "bullheadFry": {
+      "name": "大头鱼苗",
+      "icon": "fish-bullhead",
+      "sell": 77
+    },
+    "largemouthBass": {
+      "name": "大嘴鲈鱼",
+      "icon": "fish-largemouthBass",
+      "sell": 330
+    },
+    "largemouthBassFry": {
+      "name": "大嘴鲈鱼苗",
+      "icon": "fish-largemouthBass",
+      "sell": 82
+    },
+    "ghostfish": {
+      "name": "鬼鱼",
+      "icon": "fish-ghostfish",
+      "sell": 350
+    },
+    "ghostfishFry": {
+      "name": "鬼鱼苗",
+      "icon": "fish-ghostfish",
+      "sell": 87
+    },
+    "halibut": {
+      "name": "大比目鱼",
+      "icon": "fish-halibut",
+      "sell": 370
+    },
+    "halibutFry": {
+      "name": "大比目鱼苗",
+      "icon": "fish-halibut",
+      "sell": 92
+    },
+    "woodskip": {
+      "name": "木跃鱼",
+      "icon": "fish-woodskip",
+      "sell": 390
+    },
+    "woodskipFry": {
+      "name": "木跃鱼苗",
+      "icon": "fish-woodskip",
+      "sell": 97
+    },
+    "flounder": {
+      "name": "比目鱼",
+      "icon": "fish-flounder",
+      "sell": 410
+    },
+    "flounderFry": {
+      "name": "比目鱼苗",
+      "icon": "fish-flounder",
+      "sell": 102
+    },
+    "legend": {
+      "name": "传说之鱼",
+      "icon": "fish-legend",
+      "sell": 430
+    },
+    "legendFry": {
+      "name": "传说之鱼苗",
+      "icon": "fish-legend",
+      "sell": 107
+    },
+    "egg": {
+      "name": "鸡蛋",
+      "icon": "product-egg",
+      "sell": 65
+    },
+    "duckEgg": {
+      "name": "鸭蛋",
+      "icon": "product-duckEgg",
+      "sell": 85
+    },
+    "rabbitFur": {
+      "name": "兔子的脚",
+      "icon": "product-rabbitFur",
+      "sell": 130
+    },
+    "milk": {
+      "name": "牛奶",
+      "icon": "product-milk",
+      "sell": 160
+    },
+    "wool": {
+      "name": "羊毛",
+      "icon": "product-wool",
+      "sell": 150
+    },
+    "truffle": {
+      "name": "松露",
+      "icon": "product-truffle",
+      "sell": 220
+    },
+    "voidEgg": {
+      "name": "虚空蛋",
+      "icon": "product-voidEgg",
+      "sell": 200
+    },
+    "hay": {
+      "name": "饲料",
+      "icon": "hay",
+      "sell": 2
+    }
   },
   "mystery": [
-    {"id":"ancientSeed","name":"古代种子","icon":"ancientSeed","price":8,"description":"种出沉睡于星光中的古代果实","kind":"item","amount":3},
-    {"id":"watering","name":"星陨水壶","icon":"water","price":20,"description":"全田浇水，成长用时再减 10%","kind":"tool","amount":1},
-    {"id":"sickle","name":"星陨镰刀","icon":"sickle","price":30,"description":"立即解锁一键收获全部成熟作物","kind":"tool","amount":1},
-    {"id":"koiFry","name":"星光锦鲤苗","icon":"koi","price":10,"description":"兑换 3 尾锦鲤苗，放入鱼塘养殖","kind":"item","amount":3},
-    {"id":"starlight","name":"星夜农场","icon":"star","price":15,"description":"解锁夜色地图装扮，可随时切换","kind":"skin","amount":1}
+    {
+      "id": "ancientSeed",
+      "name": "上古水果种子",
+      "icon": "crop-ancient",
+      "price": 8,
+      "description": "种出沉睡于星光中的古代果实",
+      "kind": "item",
+      "amount": 3
+    },
+    {
+      "id": "watering",
+      "name": "星陨水壶",
+      "icon": "water",
+      "price": 20,
+      "description": "全田浇水，成长用时再减 10%",
+      "kind": "tool",
+      "amount": 1
+    },
+    {
+      "id": "sickle",
+      "name": "星陨镰刀",
+      "icon": "sickle",
+      "price": 30,
+      "description": "立即解锁一键收获全部成熟作物",
+      "kind": "tool",
+      "amount": 1
+    },
+    {
+      "id": "starlight",
+      "name": "星夜农场",
+      "icon": "star",
+      "price": 15,
+      "description": "解锁夜色地图装扮，可随时切换",
+      "kind": "skin",
+      "amount": 1
+    }
   ],
   "quests": [
-    {"id":"carrot","name":"新鲜的收获","npc":"花店阿禾","item":"carrot","count":6,"gold":140,"medals":3,"exp":20,"hours":24},
-    {"id":"egg","name":"早餐准备","npc":"面包师朵朵","item":"egg","count":3,"gold":180,"medals":4,"exp":25,"hours":24},
-    {"id":"carp","name":"池塘来信","npc":"钓鱼爷爷","item":"carp","count":2,"gold":220,"medals":4,"exp":25,"hours":48},
-    {"id":"corn","name":"金黄的午餐","npc":"小镇食堂","item":"corn","count":4,"gold":320,"medals":5,"exp":30,"hours":48},
-    {"id":"milk","name":"一杯暖牛奶","npc":"面包师朵朵","item":"milk","count":2,"gold":280,"medals":5,"exp":30,"hours":48}
+    {
+      "id": "carrot",
+      "name": "新鲜的收获",
+      "npc": "花店阿禾",
+      "item": "carrot",
+      "count": 6,
+      "gold": 140,
+      "medals": 3,
+      "exp": 20,
+      "hours": 24
+    },
+    {
+      "id": "egg",
+      "name": "早餐准备",
+      "npc": "面包师朵朵",
+      "item": "egg",
+      "count": 3,
+      "gold": 180,
+      "medals": 4,
+      "exp": 25,
+      "hours": 24
+    },
+    {
+      "id": "carp",
+      "name": "池塘来信",
+      "npc": "钓鱼爷爷",
+      "item": "commonCarp",
+      "count": 2,
+      "gold": 220,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    },
+    {
+      "id": "corn",
+      "name": "金黄的午餐",
+      "npc": "小镇食堂",
+      "item": "corn",
+      "count": 4,
+      "gold": 320,
+      "medals": 5,
+      "exp": 30,
+      "hours": 48
+    },
+    {
+      "id": "milk",
+      "name": "一杯暖牛奶",
+      "npc": "面包师朵朵",
+      "item": "milk",
+      "count": 2,
+      "gold": 280,
+      "medals": 5,
+      "exp": 30,
+      "hours": 48
+    },
+    {
+      "id": "potato",
+      "name": "炖汤的土豆",
+      "npc": "小镇食堂",
+      "item": "potato",
+      "count": 4,
+      "gold": 400,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    },
+    {
+      "id": "tomato",
+      "name": "红彤彤的沙拉",
+      "npc": "小镇食堂",
+      "item": "tomato",
+      "count": 4,
+      "gold": 640,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    },
+    {
+      "id": "tulip",
+      "name": "送给春天的花",
+      "npc": "花店阿禾",
+      "item": "tulip",
+      "count": 3,
+      "gold": 180,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    },
+    {
+      "id": "wheat",
+      "name": "面包出炉啦",
+      "npc": "面包师朵朵",
+      "item": "wheat",
+      "count": 5,
+      "gold": 650,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    },
+    {
+      "id": "blueberry",
+      "name": "蓝莓小甜点",
+      "npc": "面包师朵朵",
+      "item": "blueberry",
+      "count": 3,
+      "gold": 480,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    },
+    {
+      "id": "commonCarp",
+      "name": "小镇鲜鱼宴",
+      "npc": "钓鱼爷爷",
+      "item": "commonCarp",
+      "count": 2,
+      "gold": 260,
+      "medals": 4,
+      "exp": 25,
+      "hours": 48
+    }
   ],
-  "economy": {"initialGold":1280,"initialMedals":0,"initialCarrotSeeds":12,"initialCornSeeds":5,"initialBerrySeeds":4,"initialHay":24,"hayPrice":5,"ranchCapacity":8,"initialPondCapacity":10,"pondUpgradeBase":400,"pondUpgradeSlots":5,"pondMaxCapacity":30,"tillCost":5,"feedCost":1,"fishingRewardExp":5,"maxInventory":9999,"maxGold":999999999},
-  "timing": {"offlineCap":14400000,"autosave":15000,"fishCooldown":60000,"petCooldown":3600000,"offlineNoticeMin":60000},
-  "grid": {"cols":20,"rows":15},
-  "progression": {"levelExp":100,"questMax":3,"petAffection":1,"qualitySilverAt":3,"qualityGoldAt":7,"silverMultiplier":1.25,"goldMultiplier":1.5}
+  "economy": {
+    "initialGold": 1280,
+    "initialMedals": 0,
+    "initialCarrotSeeds": 12,
+    "initialCornSeeds": 5,
+    "initialBerrySeeds": 4,
+    "initialHay": 24,
+    "hayPrice": 5,
+    "ranchCapacity": 8,
+    "initialPondCapacity": 10,
+    "pondUpgradeBase": 400,
+    "pondUpgradeSlots": 5,
+    "pondMaxCapacity": 30,
+    "tillCost": 5,
+    "feedCost": 1,
+    "fishingRewardExp": 5,
+    "maxInventory": 9999,
+    "maxGold": 999999999
+  },
+  "timing": {
+    "offlineCap": 14400000,
+    "autosave": 15000,
+    "fishCooldown": 60000,
+    "petCooldown": 3600000,
+    "offlineNoticeMin": 60000
+  },
+  "grid": {
+    "cols": 6,
+    "rows": 5
+  },
+  "progression": {
+    "levelExp": 100,
+    "questMax": 3,
+    "petAffection": 1,
+    "qualitySilverAt": 3,
+    "qualityGoldAt": 7,
+    "silverMultiplier": 1.25,
+    "goldMultiplier": 1.5
+  },
+  "fishingPool": [
+    {
+      "id": "commonCarp",
+      "weight": 4
+    },
+    {
+      "id": "herring",
+      "weight": 4
+    },
+    {
+      "id": "smallmouthBass",
+      "weight": 4
+    },
+    {
+      "id": "anchovy",
+      "weight": 4
+    },
+    {
+      "id": "sunfish",
+      "weight": 4
+    },
+    {
+      "id": "sardine",
+      "weight": 4
+    },
+    {
+      "id": "redSnapper",
+      "weight": 4
+    },
+    {
+      "id": "silverCarp",
+      "weight": 4
+    },
+    {
+      "id": "shad",
+      "weight": 4
+    },
+    {
+      "id": "bullhead",
+      "weight": 4
+    },
+    {
+      "id": "largemouthBass",
+      "weight": 4
+    },
+    {
+      "id": "ghostfish",
+      "weight": 4
+    },
+    {
+      "id": "halibut",
+      "weight": 4
+    },
+    {
+      "id": "woodskip",
+      "weight": 4
+    },
+    {
+      "id": "flounder",
+      "weight": 4
+    },
+    {
+      "id": "legend",
+      "weight": 4
+    }
+  ]
 }

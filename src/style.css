@@ -10,3 +10,177 @@
 @media(max-width:680px){.farm-cottage{height:92px}.farm-top{padding-bottom:10px}.ranch-scene{min-height:350px;max-height:510px;aspect-ratio:1/1.07}.ranch-buildings{height:31%;padding-left:20px;padding-right:20px}.scene-caption{font-size:8px;padding-bottom:0}.ranch-buildings>span:nth-child(2)>.icon{display:none}}
 .harvest-fly{position:fixed;pointer-events:none;z-index:90;filter:drop-shadow(0 3px 1px #6d623044)}
 @media(min-width:981px){.play-layout{grid-template-columns:minmax(350px,420px) minmax(230px,285px)}.game-frame{max-width:420px}.desktop-heading,.desktop-footer{max-width:739px}}
+.quest-completed-badge{flex-shrink:0;color:#4c6c3b;font-size:11px;background:#e5ebce;border:1px solid #bbc99b;border-radius:5px;padding:7px 8px;white-space:nowrap}.quest-empty{text-align:center;padding:35px 10px 30px}.quest-empty h3{font-size:16px;margin:17px 0 10px}.quest-empty p{font-size:12px;line-height:1.8;color:#70634d;margin-bottom:18px}.quest-tabs{position:sticky;top:-20px;background:#fff0d2;padding:5px 0 10px;z-index:1}.completed-quest .quest-icon{padding-top:15px}
+/* Dialogs belong to the game viewport, rather than the browser viewport. */
+.game-surface{min-width:0;display:flex;flex-direction:column;flex:1}
+.game-frame>.modal-backdrop{position:absolute;inset:0;padding:14px;align-items:center;overflow:hidden;border-radius:inherit}
+.game-frame>.modal-backdrop>.modal{width:100%;max-width:100%;max-height:100%;min-height:0;margin:0;padding-bottom:0;border:2px solid #977347;border-radius:12px;box-shadow:inset 0 0 0 4px #f4dfb6,0 4px 0 #725634,0 10px 30px #17201a40}
+.game-frame .modal-body{min-height:0;padding:16px;scrollbar-gutter:stable}
+.game-frame .modal-header{padding:10px 12px}
+.game-frame .modal-header h2{font-size:18px}
+.game-frame .modal .quest-card{gap:9px;padding:13px 9px}
+.game-frame .modal .quest-icon>.icon{width:32px;height:32px}
+.game-frame .modal .quest-card>.btn{min-width:58px;padding:7px;font-size:11px}
+.game-frame .quest-tabs{top:-16px}
+.welcome-host{position:relative;display:flow-root}
+@media(max-width:680px){.game-surface{min-height:100dvh}.game-frame>.modal-backdrop{padding:12px}.game-frame .modal-body{padding:16px 12px}.game-frame .modal-header h2{font-size:17px}}
+html{scrollbar-gutter:stable}
+.game-frame>.toast-region,.welcome-host>.toast-region{position:absolute;max-width:calc(100% - 24px);bottom:20px}
+/* A dialog's bounds never depend on the selected tab's content length. */
+.game-frame>.modal-backdrop>.modal{height:var(--dialog-height,100%);flex:0 0 auto}
+.modal-header{flex:0 0 auto}
+.game-frame .tabbed-modal>.modal-body{display:flex;flex-direction:column;flex:1;overflow:hidden;gap:0}
+.modal-fixed-top,.modal-fixed-bottom,.tabbed-modal>.modal-body>.tabs{flex:0 0 auto}
+.modal-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:4px}
+.modal-fixed-bottom{border-top:1px solid #d5bd91;padding-top:12px;margin-top:12px}
+.shop-bottom{height:144px;display:flex;align-items:center;justify-content:center}
+.shop-bottom>.purchase-box{width:100%;margin:0;padding:12px}
+.shop-bottom .btn.wide{margin-top:10px}
+.tabbed-modal .sell-list{max-height:none;overflow:visible}
+.tabbed-modal .shop-wallet{margin-bottom:12px}
+.tabbed-modal .tabs{margin-bottom:10px}
+.tabbed-modal .small-tabs{padding-bottom:10px;margin-bottom:10px;flex-wrap:nowrap}
+.tabbed-modal .quest-tabs{position:static;padding:0 0 10px}
+.tabbed-modal .modal-fixed-bottom>.panel-hint{margin:0}
+@media(max-height:650px){.shop-bottom{height:124px;margin-top:8px;padding-top:8px}.shop-bottom>.purchase-box{padding:8px}.tabbed-modal .shop-wallet{margin-bottom:7px}.tabbed-modal .tabs{margin-bottom:7px}.tabbed-modal .small-tabs{padding-bottom:7px}}
+/* Do not let replacing a list change the page's scroll anchor. */
+html,body,.game-frame,.modal-body{overflow-anchor:none}
+/* Thirty large plots: the surrounding grass stays a landscape, not a checkerboard. */
+.field{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));aspect-ratio:6/5;gap:4px}
+.tile{border-radius:5px;touch-action:manipulation}
+.tile.wild,.tile.wild:nth-child(7n){background:transparent;box-shadow:none;border:1px dashed #6d8c415c}
+.tile.wild:nth-child(19n):after{display:none}
+.tile.wild:before{content:'+';font-size:17px;color:#4c703a;opacity:.75}
+.tile.tilled,.tile.planted{border:1px solid #775330;box-shadow:inset 2px 2px #c59a67,inset -2px -2px #805d3a}
+.tile.selected{outline:3px solid #fff7bd;outline-offset:1px;box-shadow:0 0 0 3px #617c3f}
+.tile.selected:after{display:none}
+.tile .icon{width:83%;height:83%}
+.tile:not(.ripe).planted .icon{width:65%;height:65%}
+.farm-cottage{height:95px}
+.scene-caption{padding:12px 0 4px;font-size:9px;gap:6px}
+.farmView .skill-strip,.selected-tile+.skill-strip{margin-top:16px}
+.migration-harvest{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:12px;padding:10px;background:#e8edce;border:1px solid #b4c38d;border-radius:6px;font-size:10px}
+.migration-harvest .btn{font-size:10px;padding:7px;flex-shrink:0}
+/* Leave a grass buffer between the plots and the illustrated fence. */
+.farm-top{padding-bottom:40px}
+.field-border{width:92%;margin:18px auto 22px}
+.scene-caption{position:absolute;left:5%;right:5%;bottom:8px;margin:0;padding:5px 7px;background:#fff3d9ed;border:1px solid #c5bb83;border-radius:4px;color:#53633c;text-shadow:none}
+@media(max-width:360px){.field-border{width:96%;margin-top:16px;margin-bottom:22px}.field{gap:2px}.scene-caption{font-size:8px;left:4.5%;right:4.5%}}
+.seed-tray{border:1px solid #c7a875;background:#fff5dc;border-radius:8px;padding:10px;box-shadow:inset 0 0 0 3px #f5e6c6}
+.seed-tray-heading{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:8px}
+.seed-tray-heading strong{display:flex;align-items:center;gap:5px;font-size:13px}
+.seed-tray-heading small{display:block;line-height:1.6;font-size:9px;color:#70634d;margin-top:4px}
+.seed-tray-heading>.btn{font-size:10px;white-space:nowrap;padding:5px;flex-shrink:0}
+.seed-rail{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;padding:3px 2px 7px;touch-action:pan-x;scrollbar-width:thin;scrollbar-color:#b7a36c #f1e4c5;overscroll-behavior-x:contain;user-select:none;-webkit-user-select:none}
+.seed-card{flex:0 0 94px;min-width:94px;min-height:102px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:#f6e8c7;border:1px solid #c3aa7a;border-bottom-width:3px;border-radius:6px;color:#59472e;touch-action:pan-x;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
+.seed-card.active{background:#e5edc9;border:2px solid #6e8c46;box-shadow:inset 0 0 0 2px #f8f3d0}
+.seed-card strong{font-size:12px}.seed-card>span{font-size:10px;color:#70634d}.seed-card:disabled{opacity:.5;cursor:not-allowed;filter:grayscale(.3)}
+.farm-tile-status{font-size:10px;line-height:1.7;color:#70634d;margin-top:7px;min-height:17px}
+.seed-tray+.skill-strip{margin-top:14px}
+.seed-drag-ghost{position:fixed;z-index:200;pointer-events:none;transform:translate(-50%,calc(-100% - 14px));display:flex;align-items:center;gap:7px;background:#fff3cfea;border:2px solid #6a8744;border-radius:8px;padding:6px 10px;box-shadow:0 4px 15px #273a2940;white-space:nowrap;color:#456333;font-size:11px}
+.is-seed-dragging,.is-seed-dragging *{cursor:grabbing!important;user-select:none!important;-webkit-user-select:none!important}
+.tile.plant-preview{background:#6d8e43!important;outline:2px solid #f9efab;outline-offset:-2px}
+.tile.plant-preview:after{content:'✓';position:absolute;inset:0;display:grid;place-items:center;color:#fff6d0;font-size:23px;border:0;pointer-events:none}
+@media(max-width:360px){.seed-tray{padding:9px}.seed-card{flex-basis:88px;min-width:88px}.seed-tray-heading small{font-size:8px}}
+.bitmap-icon{object-fit:contain;object-position:center;image-rendering:pixelated;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.tile .bitmap-icon{object-position:center bottom}
+.animal>.bitmap-icon{object-fit:contain}
+/* Keep every scene as tall as the home map at the current frame width. */
+.game-frame{container-type:inline-size}
+.game-surface{height:calc(142.5cqw + 123px);min-height:0;flex:none;overflow:hidden}
+.game-header{flex:0 0 auto}
+.game-frame .scene-content{display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto;overscroll-behavior-y:contain}
+.scene-content>*{flex-shrink:0}
+.scene-content>.game-dock{margin-top:auto}
+@media(max-width:680px){
+  .game-surface{height:max(100dvh,calc(142.5cqw + 122px + env(safe-area-inset-top) + env(safe-area-inset-bottom)));min-height:0}
+}
+
+/* Show transient status inside the header without changing scene geometry. */
+.game-header>.toast-region{
+  position:absolute;top:0;bottom:0;left:52px;right:52px;
+  width:auto;max-width:none;transform:none;display:flex;
+  justify-content:center;align-items:stretch;gap:0;padding:6px 0;
+  overflow:hidden;
+}
+.game-header>.toast-region:empty,.welcome-host>.toast-region:empty{display:none}
+.game-header:has(>.toast-region:not(:empty))>.farm-name,
+.game-header:has(>.toast-region:not(:empty))>strong,
+.game-header:has(>.toast-region:not(:empty))>.back,
+.game-header:has(>.toast-region:not(:empty))>.currency{visibility:hidden}
+.game-header>.toast-region>.toast{
+  width:100%;min-width:0;display:flex;align-items:center;justify-content:center;
+  padding:3px 6px;font-size:11px;line-height:1.35;box-shadow:none;
+  overflow:auto;overflow-wrap:anywhere;border-radius:5px;
+}
+.welcome-host>.toast-region{
+  position:absolute;top:12px;bottom:auto;left:50%;transform:translateX(-50%);
+  width:max-content;max-width:calc(100% - 24px);
+}
+.scene-content>.map-scene{flex:1 1 0;min-height:0;max-height:none;aspect-ratio:auto}
+.game-frame>.modal-backdrop{top:54px}
+@media(max-width:680px){
+  .game-header>.toast-region{top:env(safe-area-inset-top)}
+  .game-frame>.modal-backdrop{top:calc(54px + env(safe-area-inset-top))}
+}
+
+.home-dock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.home-dock>.btn{min-width:0;gap:5px;padding:9px 4px;font-size:12px;white-space:nowrap}
+@media(max-width:360px){.home-dock{gap:6px}.home-dock>.btn{gap:4px;font-size:11px}.home-dock>.btn>.icon{width:20px;height:20px}}
+
+/* The dock is a sibling of the scroll area, so it always stays at the frame bottom. */
+.game-surface>.scene-dock{flex:0 0 auto;margin-top:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));z-index:2}
+.scene-dock.dock-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.scene-dock.dock-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.scene-dock>.btn{min-width:0;gap:4px;padding:9px 4px;font-size:12px;white-space:nowrap}
+.scene-dock.dock-5>.btn{flex-direction:column;gap:3px;padding:5px 2px;font-size:11px}
+.scene-dock.dock-5>.btn>.icon{width:20px;height:20px}
+@media(max-width:360px){.scene-dock{gap:5px;padding-left:8px;padding-right:8px}.scene-dock>.btn{font-size:11px}.scene-dock>.btn>.icon{width:20px;height:20px}}
+
+.supplies-empty{width:100%;padding:20px 8px;text-align:center;color:#70634d;font-size:12px;line-height:1.8}
+.supplies-empty>.btn{margin-top:12px}
+.seed-rail:has(>.supplies-empty){user-select:auto;-webkit-user-select:auto}
+
+.game-header>.toast-region>.toast{gap:4px;text-align:center;flex-wrap:wrap;align-content:center}
+.game-header .toast .countdown{color:inherit;font-size:inherit}
+
+/* Give the shop catalogue most of the dialog height. */
+.game-frame .shop-dialog .modal-header{padding:6px 10px}
+.game-frame .shop-dialog .modal-header h2{font-size:17px}
+.game-frame .shop-dialog .modal-body{padding:10px}
+.shop-dialog .modal-fixed-top>.tabs{gap:6px;margin-bottom:6px}
+.shop-dialog .tabs>.btn{min-height:34px;padding:6px;font-size:11px}
+.shop-dialog .small-tabs{padding-bottom:6px;margin-bottom:6px}
+.shop-dialog .shop-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.shop-dialog .shop-item{min-width:0;padding:9px 4px 7px;box-shadow:inset 0 0 0 2px #f6e6c1}
+.shop-dialog .shop-item>.icon{width:32px;height:32px}
+.shop-dialog .shop-item strong{font-size:11px;line-height:1.4;margin-top:4px;overflow-wrap:anywhere}
+.shop-dialog .shop-item small{font-size:9px;line-height:1.4;margin:3px 0 5px}
+.shop-dialog .shop-item>span{font-size:11px;gap:3px}
+.shop-dialog .shop-item>span>.icon{width:14px;height:14px}
+.shop-dialog .shop-bottom{height:106px;padding-top:7px;margin-top:7px}
+.shop-dialog .shop-bottom>.purchase-box{padding:7px}
+.shop-dialog .purchase-box>div{gap:6px}
+.shop-dialog .purchase-box strong{font-size:11px;min-width:0;overflow-wrap:anywhere}
+.shop-dialog .quantity{gap:5px;flex-shrink:0}
+.shop-dialog .quantity>.btn{min-width:32px;min-height:34px;padding:4px;font-size:16px}
+.shop-dialog .quantity>.btn[data-action="qty-max"]{font-size:11px;min-width:38px}
+.shop-dialog .quantity output{font-size:13px;width:22px}
+.shop-dialog .purchase-box>.btn.wide{min-height:36px;margin-top:6px;padding:6px;font-size:12px}
+@media(max-width:360px){.game-frame .shop-dialog .modal-body{padding:8px}.shop-dialog .shop-grid{gap:5px}.shop-dialog .shop-item strong{font-size:10px}.shop-dialog .quantity{gap:3px}.shop-dialog .quantity>.btn{min-width:30px}}
+
+.catch-result{text-align:center;padding:12px 4px}
+.catch-art{width:140px;height:140px;margin:0 auto 16px;display:grid;place-items:center;background:radial-gradient(circle,#f6e5a1,#e5edcb);border:1px solid #c1ae78;border-radius:50%}
+.catch-result h3{font-family:"Songti SC",serif;font-size:24px}
+.catch-weight{font-size:34px;font-weight:800;color:#59733f;margin:12px 0}
+.catch-weight small{font-size:16px}
+.catch-result>.btn{margin-top:20px}
+
+.stock-dialog .stock-actions{display:flex;flex-direction:column;gap:5px;flex:0 0 auto}
+.stock-dialog .stock-actions>.btn{min-height:36px;padding:6px 10px;font-size:11px}
+/* A shorter pond scene leaves more room for the fish list. */
+.game-frame .pond-scene{aspect-ratio:auto;height:clamp(220px,78cqw,330px);min-height:0;max-height:none;flex:0 0 auto;background-position:0% 57%}
+.pond-scene .pond-fishing{top:auto;right:auto;left:50%;bottom:48px;transform:translateX(-50%);min-width:126px}
+.pond-scene .pond-fishing:hover:not(:disabled){transform:translate(-50%,-1px)}
+.pond-scene .pond-fishing:active:not(:disabled){transform:translate(-50%,1px)}
+.pond-panel .fish-list{margin:10px 0 0}

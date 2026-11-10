@@ -1,4 +1,10 @@
+import itemAssets from '../data/item-assets.json';
 const shapes: Record<string, string> = {
+  shop: '<path fill="#997042" d="M3 10h18v12H3zM5 2h14l4 7v3H1V9z"/><path fill="#efd5a0" d="M5 12h14v8H5z"/><path fill="#dc9b52" d="M5 3h3v7H2V8zm6 0h3v7h-3zm6 0h2l3 5v2h-5z"/><path fill="#fff1cb" d="M8 3h3v7H8zm6 0h3v7h-3z"/><path fill="#97734c" d="M8 14h8v8H8z"/>',
+  fur: '<path fill="#ae9b7b" d="M5 4h5v3h4V4h5v6h3v7h-4v5H6v-5H2v-7h3z"/><path fill="#fff2dc" d="M6 7h4v4h4V7h4v7h2v2h-4v4H8v-4H4v-2h2z"/>',
+  wool: '<path fill="#c7b291" d="M5 3h14v3h3v13h-3v3H5v-3H2V6h3z"/><path fill="#fff3db" d="M6 5h12v3h2v9h-3v3H7v-3H4V8h2z"/><path fill="#dbcaab" d="M9 7h7v3h-4v3h5v4H8v-3H6v-3h3z"/>',
+  truffle: '<path fill="#5e4634" d="M7 4h10v3h4v11h-4v4H6v-4H2V9h5z"/><path fill="#947352" d="M8 6h8v3h3v7h-4v4H7v-4H4v-5h4z"/><path fill="#c1a279" d="M9 8h3v3H9zm5 6h3v3h-3z"/>',
+  voidEgg: '<path fill="#49374f" d="M9 2h6v3h3v4h2v10h-3v3H7v-3H4V9h2V5h3z"/><path fill="#705176" d="M10 4h4v3h3v5h2v6h-3v3H8v-3H5v-6h2V7h3z"/><path fill="#e68370" d="M9 10h3v3H9zm5 5h3v3h-3z"/>',
   star: '<path fill="#f4c54d" stroke="#9b632e" d="m12 2 3 6h7v4l-5 3 2 7-7-4-7 4 2-7-5-3V8h7z"/><path fill="#fff1a4" d="M11 5h2v8h-2zM7 9h4v2H7z"/>',
   coin: '<path fill="#b57a2e" d="M7 2h10v2h3v3h2v10h-2v3h-3v2H7v-2H4v-3H2V7h2V4h3z"/><path fill="#f8d359" d="M7 4h10v2h2v12h-2v2H7v-2H5V6h2z"/><path fill="#b98929" d="M11 7h3v10h-3z"/><path fill="#fff2b2" d="M7 7h2v9H7z"/>',
   carrot: '<path fill="#46723d" d="M13 2h3v5h2V3h3v5h-5v3h-4V7h-3V4h3v2h1z"/><path fill="#b35b29" d="M9 8h7v3h3v5h-3v3h-4v3H4v-7h3v-4h2z"/><path fill="#ef9b3b" d="M10 9h5v3h2v3h-3v3h-4v2H6v-5h3z"/><path fill="#ffd06d" d="M10 10h3v2h-3zM7 15h3v2H7z"/>',
@@ -22,7 +28,7 @@ const shapes: Record<string, string> = {
   gear: '<path fill="#7c8a7b" d="M9 1h6v4h4v4h4v6h-4v4h-4v4H9v-4H5v-4H1V9h4V5h4z"/><path fill="#d6ddbd" d="M8 8h8v8H8z"/><path fill="#657260" d="M10 10h4v4h-4z"/>',
   heart: '<path fill="#bd6960" d="M2 4h7v3h6V4h7v10h-4v4h-3v4H9v-4H6v-4H2z"/><path fill="#eea29a" d="M4 6h4v4H4z"/>',
   clock: '<path fill="#967542" d="M7 2h10v3h4v14h-4v3H7v-3H3V5h4z"/><path fill="#fff0c9" d="M8 4h8v3h3v10h-3v3H8v-3H5V7h3z"/><path fill="#967542" d="M11 6h2v7h5v2h-7z"/>',
-  mute: '<path fill="#8a7255" d="M2 9h5l6-6v18l-6-6H2zM16 7h2v3h3v2h-3v3h-2v-3h-2v-2h2z"/>',
+  mute: '<path fill="#8a7255" d="M2 9h5l6-6v18l-6-6H2z"/><path d="m16 8 6 8m0-8-6 8" fill="none" stroke="#a5503d" stroke-width="2.5" stroke-linecap="square"/>',
   sound: '<path fill="#8a7255" d="M2 9h5l6-6v18l-6-6H2zM16 7h2v10h-2zm4-3h2v16h-2z"/>',
   save: '<path fill="#8c785d" d="M3 2h15l4 4v16H2V2z"/><path fill="#d0d7bd" d="M6 3h10v6H6zM6 13h12v8H6z"/><path fill="#8c785d" d="M13 3h2v5h-2zM8 15h8v1H8zm0 3h8v1H8z"/>',
   rod: '<path fill="#927043" d="M3 21 17 3l3 2L6 23z"/><path fill="#c3d9cd" d="M17 2h5v13h-1V3h-4z"/><path fill="#dd8370" d="M20 15h3v4h-3z"/>',
@@ -30,4 +36,7 @@ const shapes: Record<string, string> = {
   leaf: '<path fill="#587b46" d="M3 3h12v3h4v4h3v10H12v-3H8v-4H5V9H3z"/><path fill="#a4c26e" d="M6 5h7v3h4v4h3v5h-6v-3h-4v-4H7z"/>',
   barn: '<path fill="#8c654b" d="M1 8h3V5h4V2h8v3h4v3h3v4h-3v10H4V12H1z"/><path fill="#d88269" d="M5 10h14v10H5z"/><path fill="#f4dfb2" d="M8 12h8v9H8z"/><path fill="#aa6952" d="M10 14h4v7h-4z"/>'
 };
-export function icon(name: string, size = 24) { return `<svg class="icon icon-${name}" width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true" shape-rendering="crispEdges">${shapes[name] || shapes.star}</svg>`; }
+export function icon(name: string, size = 24) {
+  const asset = itemAssets[name as keyof typeof itemAssets];
+  if (asset) return `<img class="icon bitmap-icon icon-${name}" src="${asset}" width="${size}" height="${size}" alt="" aria-hidden="true" draggable="false">`;
+  return `<svg class="icon icon-${name}" width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true" shape-rendering="crispEdges">${shapes[name] || shapes.star}</svg>`; }

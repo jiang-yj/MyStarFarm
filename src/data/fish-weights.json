@@ -1,0 +1,18 @@
+{
+  "commonCarp": [0.5, 12],
+  "herring": [0.2, 1.5],
+  "smallmouthBass": [0.4, 6],
+  "anchovy": [0.02, 0.12],
+  "sunfish": [0.1, 1.5],
+  "sardine": [0.05, 0.5],
+  "redSnapper": [0.5, 12],
+  "silverCarp": [1, 20],
+  "shad": [0.3, 4],
+  "bullhead": [0.3, 4],
+  "largemouthBass": [0.5, 10],
+  "ghostfish": [0.2, 3],
+  "halibut": [2, 60],
+  "woodskip": [0.3, 5],
+  "flounder": [0.3, 8],
+  "legend": [8, 40]
+}

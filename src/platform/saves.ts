@@ -10,7 +10,7 @@ export class SaveRepository {
     let db: Database;
     try { db = JSON.parse(raw); } catch { throw new Error('本机存档无法读取。请先导出原始备份，不会覆盖现有数据。'); }
     if (!db || typeof db !== 'object' || db.version !== 1 || !Array.isArray(db.saves) || db.saves.length > 20) throw new Error('存档库版本不支持，请先导出原始备份');
-    db.saves.forEach(row => { if (!row || typeof row !== 'object') throw new Error('存档条目损坏，请先导出原始备份'); validateSave(row.data); if (!Number.isInteger(row.revision) || row.revision < 1) throw new Error('存档版本号无效'); });
+    db.saves.forEach(row => { if (!row || typeof row !== 'object') throw new Error('存档条目损坏，请先导出原始备份'); row.data = validateSave(row.data); if (!Number.isInteger(row.revision) || row.revision < 1) throw new Error('存档版本号无效'); });
     return db;
   }
   private write(db: Database) { try { this.storage.write(STORAGE_KEY, JSON.stringify(db)); } catch { throw new Error('保存失败：浏览器存储不可用或空间不足。请立即导出备份。'); } }

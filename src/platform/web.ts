@@ -1,4 +1,4 @@
-import type { AudioAdapter, PlatformAdapter, StorageAdapter } from '../game/types';
+import type { AudioAdapter, MusicScene, PlatformAdapter, StorageAdapter } from '../game/types';
 import audioData from '../data/audio.json';
 class WebStorage implements StorageAdapter {
   read(key: string) { return localStorage.getItem(key); }
@@ -9,32 +9,40 @@ class WebAudio implements AudioAdapter {
   private enabled = false;
   private volume = 0.5;
   private context: AudioContext | null = null;
-  private musicTimer: ReturnType<typeof setTimeout> | null = null;
-  private musicNotes = new Set<OscillatorNode>();
-  setEnabled(enabled: boolean, volume: number) {
-    this.enabled = enabled; this.volume = volume;
-    if (!enabled) {
-      if (this.musicTimer) clearTimeout(this.musicTimer); this.musicTimer = null;
-      this.musicNotes.forEach(note => { try { note.stop(); } catch { /* Already ended. */ } }); this.musicNotes.clear();
-    } else if (!this.musicTimer) {
-      try { this.context ??= new AudioContext(); void this.context.resume(); this.scheduleMusic(); } catch { /* Audio can be unavailable on embedded browsers. */ }
+  private music: HTMLAudioElement | null = null;
+  private track: string | null = null;
+  setMusic(scene: MusicScene) {
+    const track = `${import.meta.env.BASE_URL}${audioData.tracks[scene]}`;
+    if (this.track === track) return;
+    this.track = track;
+    if (this.music) {
+      this.music.pause();
+      this.music.src = track;
+      this.music.load();
     }
+    this.startMusic();
   }
-  private scheduleMusic() {
-    if (!this.enabled || !this.context) return;
-    const context = this.context; const start = context.currentTime;
-    audioData.melody.forEach((frequency, index) => {
-      if (!frequency) return;
-      const note = context.createOscillator(); const gain = context.createGain(); const t = start + index * audioData.stepSeconds;
-      note.type = 'triangle'; note.frequency.value = frequency; gain.gain.setValueAtTime(0, t);
-      gain.gain.linearRampToValueAtTime(this.volume * audioData.musicGain, t + 0.015); gain.gain.exponentialRampToValueAtTime(0.0001, t + audioData.noteSeconds);
-      note.connect(gain); gain.connect(context.destination); this.musicNotes.add(note); note.onended = () => { this.musicNotes.delete(note); note.disconnect(); gain.disconnect(); };
-      note.start(t); note.stop(t + audioData.noteSeconds + 0.01);
-    });
-    this.musicTimer = setTimeout(() => { this.musicTimer = null; this.scheduleMusic(); }, audioData.loopSeconds * 1000);
+  setEnabled(enabled: boolean, volume: number) {
+    this.enabled = enabled; this.volume = Math.max(0, Math.min(1, volume));
+    if (this.music) this.music.volume = this.volume;
+    if (!enabled) this.music?.pause();
+    else this.startMusic();
+  }
+  private startMusic() {
+    if (!this.enabled || !this.track) return;
+    try {
+      if (!this.music) {
+        this.music = new Audio(this.track);
+        this.music.loop = true;
+        this.music.preload = 'auto';
+      }
+      this.music.volume = this.volume;
+      void this.music.play().catch(() => { /* Retry after the next user gesture. */ });
+    } catch { /* Audio is optional on embedded browsers. */ }
   }
   play(kind: 'click' | 'harvest' | 'level') {
     if (!this.enabled) return;
+    this.startMusic();
     try {
       this.context ??= new AudioContext();
       void this.context.resume();

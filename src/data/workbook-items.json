@@ -1,0 +1,1150 @@
+{
+  "source": "物品分类.xlsx",
+  "sheet": "Sheet1",
+  "sprout": {
+    "path": "/art/items/image108.png",
+    "description": "Cauliflower Stage 1.png",
+    "sha256": "9deb0797277bdf00b2f4bd8fa5d70ee7b23d072fc153bbb662c5dd64142589ee",
+    "cell": "D2",
+    "imageId": "ID_2A60510C3EBC4D169C89F48A7BBD9668"
+  },
+  "crops": [
+    {
+      "name": "咖啡豆",
+      "row": 4,
+      "item": {
+        "path": "/art/items/image2.png",
+        "description": "Coffee Bean.png",
+        "sha256": "e9dc5d43f439b234289dcd0d91751efadec11b7b718506f323ce1f0e8156041d",
+        "cell": "C4",
+        "imageId": "ID_CFA8E1972869460CA80E2AB9060CF98F"
+      },
+      "mature": {
+        "path": "/art/items/image1.png",
+        "description": "Coffee Stage 6.png",
+        "sha256": "25b681ebef341aa73383303d21953afd103ca94904a0b1d74e68fd8a2974d44f",
+        "cell": "D4",
+        "imageId": "ID_8B7B8A2282E647CF9C98D0EBBAE9DEDA"
+      }
+    },
+    {
+      "name": "未碾米",
+      "row": 5,
+      "item": {
+        "path": "/art/items/image3.png",
+        "description": "Unmilled Rice.png",
+        "sha256": "32d155e213a8a78019effbdc4aeda26354792d3ca5c37093195965b02495be98",
+        "cell": "C5",
+        "imageId": "ID_BCFCA6A489B94116B204F3FB96143B78"
+      },
+      "mature": {
+        "path": "/art/items/image4.png",
+        "description": "Unmilled Rice Stage 5.png",
+        "sha256": "56c38876f64517dd84194784525ba63007145dc22d3f56d8ceede24313e556d8",
+        "cell": "D5",
+        "imageId": "ID_5C58C31357E54140ABB2C3C1148D9A58"
+      }
+    },
+    {
+      "name": "郁金香",
+      "row": 6,
+      "item": {
+        "path": "/art/items/image5.png",
+        "description": "Tulip.png",
+        "sha256": "2f39654298cd2e441609a50cd5706250a1b189faa3d62538a00714807c683aa6",
+        "cell": "C6",
+        "imageId": "ID_97651298973C420B9F236AD339864D90"
+      },
+      "mature": {
+        "path": "/art/items/image5.png",
+        "description": "Tulip.png",
+        "sha256": "2f39654298cd2e441609a50cd5706250a1b189faa3d62538a00714807c683aa6",
+        "cell": "D6",
+        "imageId": "ID_97651298973C420B9F236AD339864D90"
+      }
+    },
+    {
+      "name": "防风草",
+      "row": 7,
+      "item": {
+        "path": "/art/items/image6.png",
+        "description": "Parsnip.png",
+        "sha256": "ac2bd96ebb1c62a15f51ccba17488c92ea8d08c200afae84b63225c470695892",
+        "cell": "C7",
+        "imageId": "ID_7DD54104665D404CA42DC413E47F1F87"
+      },
+      "mature": {
+        "path": "/art/items/image7.png",
+        "description": "Parsnip Stage 5.png",
+        "sha256": "c329f87795ddc9fe34fdc526cb2661c09838712bb95440e3dcb53feb5866df0c",
+        "cell": "D7",
+        "imageId": "ID_5C2005FBC566461199049BF9BEFD7010"
+      }
+    },
+    {
+      "name": "胡萝卜",
+      "row": 8,
+      "item": {
+        "path": "/art/items/image8.png",
+        "description": "Carrot.png",
+        "sha256": "e6ad4d29a07fb6d444d1124b9386105ea7c4271d5681204988a3fc7ba9da733a",
+        "cell": "C8",
+        "imageId": "ID_24B3EAD7CEAE4F3BB59473E2DEA1B39B"
+      },
+      "mature": {
+        "path": "/art/items/image9.png",
+        "description": "Carrot Stage 4.png",
+        "sha256": "f480277bab2e25112b41c434e98be4a742267a350637498a7719f7152c340c52",
+        "cell": "D8",
+        "imageId": "ID_8E4C6337A1EA425CAB686DDEF995AFDB"
+      }
+    },
+    {
+      "name": "青豆",
+      "row": 9,
+      "item": {
+        "path": "/art/items/image10.png",
+        "description": "Green Bean.png",
+        "sha256": "ebc6ceea90dd4139f1003378e1c30afa81dd66e31687e2278d1ccdb888fb2759",
+        "cell": "C9",
+        "imageId": "ID_397C1E870A3F44D087D7B86C15725AF3"
+      },
+      "mature": {
+        "path": "/art/items/image11.png",
+        "description": "Green Bean Stage 7.png",
+        "sha256": "ea74d03106010f2eacb435bfa24727d36cbaa2c93cb13f7a1329f65e24bbde07",
+        "cell": "D9",
+        "imageId": "ID_D96C8C4F89D44ECD89A74B22D70BCACD"
+      }
+    },
+    {
+      "name": "蓝爵",
+      "row": 10,
+      "item": {
+        "path": "/art/items/image12.png",
+        "description": "Blue Jazz.png",
+        "sha256": "6949ebd5cbadb167e8d3dc8cafd5153de22698fdd490ba59b9248481420be1b5",
+        "cell": "C10",
+        "imageId": "ID_967926D4A4164861AA0781573920A930"
+      },
+      "mature": {
+        "path": "/art/items/image12.png",
+        "description": "Blue Jazz.png",
+        "sha256": "6949ebd5cbadb167e8d3dc8cafd5153de22698fdd490ba59b9248481420be1b5",
+        "cell": "D10",
+        "imageId": "ID_967926D4A4164861AA0781573920A930"
+      }
+    },
+    {
+      "name": "蒜",
+      "row": 11,
+      "item": {
+        "path": "/art/items/image13.png",
+        "description": "Garlic.png",
+        "sha256": "4d0264818c4966931d59d97e3a69edf5ee7133c235ee38b8f4228692b05bf79d",
+        "cell": "C11",
+        "imageId": "ID_3929FB5256BD442483FB6F63257FA856"
+      },
+      "mature": {
+        "path": "/art/items/image14.png",
+        "description": "Garlic Stage 5.png",
+        "sha256": "9858a2838e14fedef853fae7c1d3231b5f07234e8f0e152ba0f2b9967dbd86dd",
+        "cell": "D11",
+        "imageId": "ID_F828357AB60D40538521222ADF774510"
+      }
+    },
+    {
+      "name": "土豆",
+      "row": 12,
+      "item": {
+        "path": "/art/items/image15.png",
+        "description": "Potato.png",
+        "sha256": "5242b2398fa9cab3c2287e86b8f75effd6d254aa89a95cfa2c72b6ac586c4637",
+        "cell": "C12",
+        "imageId": "ID_8736AF653B494EC29956FBBEE28DCDDE"
+      },
+      "mature": {
+        "path": "/art/items/image16.png",
+        "description": "Potato Stage 6.png",
+        "sha256": "380a8e9b0f9541b471248ddebd46e623678d30e2bca241509af8d7fef09e802a",
+        "cell": "D12",
+        "imageId": "ID_D3DBF2D6FA714E7AAD75F4126914778B"
+      }
+    },
+    {
+      "name": "甘蓝菜",
+      "row": 13,
+      "item": {
+        "path": "/art/items/image17.png",
+        "description": "Kale.png",
+        "sha256": "fd48351b1dab0c8ac11ddb47dc4ea58f83c58074045afec2e243884f90b07911",
+        "cell": "C13",
+        "imageId": "ID_5C4183DD95C54E008409291846BB5DE8"
+      },
+      "mature": {
+        "path": "/art/items/image18.png",
+        "description": "Kale Stage 5.png",
+        "sha256": "144d58cdb6382066921f2bc08f78d6e2f7a00691d9d99618af48297273437884",
+        "cell": "D13",
+        "imageId": "ID_50DE4346ABE143F784A7DA060618CE42"
+      }
+    },
+    {
+      "name": "草莓",
+      "row": 14,
+      "item": {
+        "path": "/art/items/image19.png",
+        "description": "Strawberry.png",
+        "sha256": "adb31f239b8322da6ef59047fd5d7f48b24c5b848386d0b1d300e39890e420c5",
+        "cell": "C14",
+        "imageId": "ID_C0CE227C9DD2414ABFBA4218E16A9985"
+      },
+      "mature": {
+        "path": "/art/items/image20.png",
+        "description": "Strawberry Stage 7.png",
+        "sha256": "2c9251b234ccfa2a96dffabc85ed41c170fc1ec34abde529084018bbe6651838",
+        "cell": "D14",
+        "imageId": "ID_2E96A35E39924D04814B75E147E10498"
+      }
+    },
+    {
+      "name": "花椰菜",
+      "row": 15,
+      "item": {
+        "path": "/art/items/image21.png",
+        "description": "Cauliflower.png",
+        "sha256": "5f38370c363642c4f901c18f475d5396e1baad71e7b480fef14057e22560fcac",
+        "cell": "C15",
+        "imageId": "ID_6D29BF23C17F4408859A434809176CE9"
+      },
+      "mature": {
+        "path": "/art/items/image22.png",
+        "description": "Cauliflower Stage 6.png",
+        "sha256": "ee99d114125d1b44cf3e48a75942d72a041c8b0d2916eda620b7eaaa8c82da36",
+        "cell": "D15",
+        "imageId": "ID_15686B356A404EE6B95A71CEFAA311A5"
+      }
+    },
+    {
+      "name": "大黄",
+      "row": 16,
+      "item": {
+        "path": "/art/items/image23.png",
+        "description": "Rhubarb.png",
+        "sha256": "9f099388150fb6b946cc40eaa03184fe15f351d3f325809ebe38c85b8d2ac1ef",
+        "cell": "C16",
+        "imageId": "ID_4C83D7FEBA714AC8AA719A3A59B125EE"
+      },
+      "mature": {
+        "path": "/art/items/image24.png",
+        "description": "Rhubarb Stage 6.png",
+        "sha256": "a1af6870199e5709fecc63a586e2ed37f5ae3e78658fed78b2f394c622490b5e",
+        "cell": "D16",
+        "imageId": "ID_AC7C96A2D4C847918C4F58CABEB67FFA"
+      }
+    },
+    {
+      "name": "上古水果",
+      "row": 17,
+      "item": {
+        "path": "/art/items/image25.png",
+        "description": "Ancient Fruit.png",
+        "sha256": "091321dff104c81c534394c334dfb3519c1e5bea73fd6623342da18a8e21ce24",
+        "cell": "C17",
+        "imageId": "ID_2CEDF7FBEEAD484E9AE8A1BE13F366BE"
+      },
+      "mature": {
+        "path": "/art/items/image26.png",
+        "description": "Ancient Fruit Stage 6.png",
+        "sha256": "ac142ecdcbf6239cdabab2c7d755db0a1c56ac28bb191ab41d9af4a6dd3316c3",
+        "cell": "D17",
+        "imageId": "ID_4E56A133703B4B02BAD692F2D7A021B1"
+      }
+    },
+    {
+      "name": "啤酒花",
+      "row": 18,
+      "item": {
+        "path": "/art/items/image27.png",
+        "description": "Hops.png",
+        "sha256": "a6408e71f1cec2cf17952b936f30a3c68122ec4c8be7d3bacc5eafff50dc42ac",
+        "cell": "C18",
+        "imageId": "ID_38CC2B61C4FF4B708B166780BC0A1526"
+      },
+      "mature": {
+        "path": "/art/items/image28.png",
+        "description": "Hops Stage 6.png",
+        "sha256": "66fbfda463c6d17645d8ce625a37a9467a8a2dd394e0a1c25dcc349fba101fc1",
+        "cell": "D18",
+        "imageId": "ID_6995E4144C5A42F0A583DAFEF8934926"
+      }
+    },
+    {
+      "name": "小麦",
+      "row": 19,
+      "item": {
+        "path": "/art/items/image29.png",
+        "description": "Wheat.png",
+        "sha256": "70853b10d8f7a6a685346e8cb213ea97851cdcae29eebe3a0ecee4a817dae7f1",
+        "cell": "C19",
+        "imageId": "ID_E4037757905D4E81BA1569BCCA61B8CD"
+      },
+      "mature": {
+        "path": "/art/items/image30.png",
+        "description": "Wheat Stage 5.png",
+        "sha256": "9ca7baa324c5a7cb24daef8701c47537e885240cd2783e11e32122f09b8f081b",
+        "cell": "D19",
+        "imageId": "ID_EE47FEF96C124AA0A54D87FF6C05C4BF"
+      }
+    },
+    {
+      "name": "辣椒",
+      "row": 20,
+      "item": {
+        "path": "/art/items/image31.png",
+        "description": "Hot Pepper.png",
+        "sha256": "71f3c4e47e8df7b2517d613bb85d67840462bc1dab9ba7ab90a2a0700dde437d",
+        "cell": "C20",
+        "imageId": "ID_4A79F3CADAC3460BA258F1BDF8809532"
+      },
+      "mature": {
+        "path": "/art/items/image32.png",
+        "description": "Hot Pepper Stage 6.png",
+        "sha256": "452f48a8b309c49ebb5a0f32d141ab0a32d5d1c157b83dd2927b298341495cc1",
+        "cell": "D20",
+        "imageId": "ID_598B029771E5443D91FA0DC239E79969"
+      }
+    },
+    {
+      "name": "金皮西葫芦",
+      "row": 21,
+      "item": {
+        "path": "/art/items/image33.png",
+        "description": "Summer Squash.png",
+        "sha256": "b27996d1f60850daa0270f05be6d2b2f2a88e114450504fcace6aaea7d7d0ea1",
+        "cell": "C21",
+        "imageId": "ID_4AC1576837C045FEB9289FDB1D75FED2"
+      },
+      "mature": {
+        "path": "/art/items/image34.png",
+        "description": "Summer Squash Stage 6.png",
+        "sha256": "e9c24b306f21118ae055e59e0fd157494058fdc4a8f8fea0a862d4c81d0d6e91",
+        "cell": "D21",
+        "imageId": "ID_69CE7B37D8D74833994C1EB4FE64BA37"
+      }
+    },
+    {
+      "name": "蓝莓",
+      "row": 22,
+      "item": {
+        "path": "/art/items/image35.png",
+        "description": "Blueberry.png",
+        "sha256": "a1e3160226754f88a21c07cfb8ee1b685134374930623d6f4949f385290afd55",
+        "cell": "C22",
+        "imageId": "ID_CF16798F6E8B4722B6C7283083FD9BD8"
+      },
+      "mature": {
+        "path": "/art/items/image36.png",
+        "description": "Blueberry Stage 6.png",
+        "sha256": "cd162769ee7efc050999f354da8b28c2f3f9de27cf9aa1e2349eb66ccbd0d118",
+        "cell": "D22",
+        "imageId": "ID_1022357E2BF449819EAAA2EF3A97F2A6"
+      }
+    },
+    {
+      "name": "玉米",
+      "row": 23,
+      "item": {
+        "path": "/art/items/image37.png",
+        "description": "Corn.png",
+        "sha256": "7f29f9d3bd72c3516de091a445d5b8afedb990223d151dc4a9b64abe721273ea",
+        "cell": "C23",
+        "imageId": "ID_C17441F0FD2B4960A1C1A22689608CDA"
+      },
+      "mature": {
+        "path": "/art/items/image38.png",
+        "description": "Corn Stage 6.png",
+        "sha256": "7b770b4883b2457b82aa754eca046d0e2a5250e4c292cb0c371ca5029a502512",
+        "cell": "D23",
+        "imageId": "ID_DD065285E0FE49F484AC861BE4E6131A"
+      }
+    },
+    {
+      "name": "西红柿",
+      "row": 24,
+      "item": {
+        "path": "/art/items/image39.png",
+        "description": "Tomato.png",
+        "sha256": "84e3b62e37def9d7e092892d841dcda6481097cb677339f16da16f9b750127a2",
+        "cell": "C24",
+        "imageId": "ID_5A00A7F7B73248CEBC42BEA8BFF21F56"
+      },
+      "mature": {
+        "path": "/art/items/image40.png",
+        "description": "Tomato Stage 6.png",
+        "sha256": "a31f3785217a95547e6d4d08a70b82fd8966d60458e8a560bc540cbc8c4e3f3a",
+        "cell": "D24",
+        "imageId": "ID_0C22C3252EFA4807946C1761D7BE4385"
+      }
+    },
+    {
+      "name": "向日葵",
+      "row": 25,
+      "item": {
+        "path": "/art/items/image41.png",
+        "description": "Sunflower.png",
+        "sha256": "ef5c7e075095508b18f282c02b8ac2b74271c55eb47623cba25dd884d9e1315a",
+        "cell": "C25",
+        "imageId": "ID_855F75B3FA43466ABF762E8735017569"
+      },
+      "mature": {
+        "path": "/art/items/image42.png",
+        "description": "Sunflower Stage 5.png",
+        "sha256": "e7b1efe86262ccb35e8b21553f7a9ffb679a7bec66999f75c3baead03671dd9a",
+        "cell": "D25",
+        "imageId": "ID_88FA0DEE3B8544B19D74A52797BB6364"
+      }
+    },
+    {
+      "name": "萝卜",
+      "row": 26,
+      "item": {
+        "path": "/art/items/image43.png",
+        "description": "Radish.png",
+        "sha256": "24969810a4638e47e0492583139fab9c1f15cfe27bee3ae90efb4dbcabdbb814",
+        "cell": "C26",
+        "imageId": "ID_68F379D6DB074477ACF315A8906BC3FA"
+      },
+      "mature": {
+        "path": "/art/items/image44.png",
+        "description": "Radish Stage 5.png",
+        "sha256": "bfbbe3e5472c1259d76c22921a729925013522e330592def8271f888866388c5",
+        "cell": "D26",
+        "imageId": "ID_35DEA5D6E99D415E94ECE0A155423370"
+      }
+    },
+    {
+      "name": "夏季亮片",
+      "row": 27,
+      "item": {
+        "path": "/art/items/image45.png",
+        "description": "Summer Spangle.png",
+        "sha256": "963d15b8da5082e7e25db5255caf7d2e867bd142eab18a190b8b44377554e8fc",
+        "cell": "C27",
+        "imageId": "ID_0D2D6E4835944EA4A19D9B383A414E38"
+      },
+      "mature": {
+        "path": "/art/items/image46.png",
+        "description": "Summer Spangle Stage 5.png",
+        "sha256": "fc098ecac00083c08251b7837d71d1a15bb1a6e6b07b9dcfd436e6d1ea2b900b",
+        "cell": "D27",
+        "imageId": "ID_FF6FF57F51B7451A8D8E7B038E945856"
+      }
+    },
+    {
+      "name": "芋头",
+      "row": 28,
+      "item": {
+        "path": "/art/items/image47.png",
+        "description": "Taro Root.png",
+        "sha256": "ea5bfe2a3e7b3e5552b89dd989dd1dbb86139faa3e1619ca7db635ee99a55d0a",
+        "cell": "C28",
+        "imageId": "ID_E5DEF90A3C4C4CE3AC2A5D0226F31B3D"
+      },
+      "mature": {
+        "path": "/art/items/image48.png",
+        "description": "Taro Stage 5.png",
+        "sha256": "5dd070b85f84ff7a014cdb3d3aa27406c852a2a5ae89f4756a3fdfd8c5d21b7e",
+        "cell": "D28",
+        "imageId": "ID_FA93033BCBEF42CEA55137F0A99ED58B"
+      }
+    },
+    {
+      "name": "虞美人花",
+      "row": 29,
+      "item": {
+        "path": "/art/items/image49.png",
+        "description": "Poppy.png",
+        "sha256": "63aa1fe43b27679949d8a13bca30857a7e30394ceba23604711d791766562a15",
+        "cell": "C29",
+        "imageId": "ID_7EEEF641AC9546508E31E3C818F24FC5"
+      },
+      "mature": {
+        "path": "/art/items/image50.png",
+        "description": "Poppy Stage 5.png",
+        "sha256": "f9e993625658bfe3337685cda22da26f700129fb95b56bfade72d751dc153b19",
+        "cell": "D29",
+        "imageId": "ID_2C9088846D7C4297B2FED53845D30651"
+      }
+    },
+    {
+      "name": "甜瓜",
+      "row": 30,
+      "item": {
+        "path": "/art/items/image51.png",
+        "description": "Melon.png",
+        "sha256": "b90cac99636acebcbe3fc74868f6152bb6e93c1923f8c76cace053f28ace2951",
+        "cell": "C30",
+        "imageId": "ID_4A464AA54ABF463DA0939DA3093D9E3F"
+      },
+      "mature": {
+        "path": "/art/items/image52.png",
+        "description": "Melon Stage 6.png",
+        "sha256": "e0e3139a39c994c1c401c97c7d3f8551e5c1b8e23b57d665f97f6986c3a906ba",
+        "cell": "D30",
+        "imageId": "ID_D43EE872F73F4C73A3C0BC4FB8552F86"
+      }
+    },
+    {
+      "name": "红叶卷心菜",
+      "row": 31,
+      "item": {
+        "path": "/art/items/image53.png",
+        "description": "Red Cabbage.png",
+        "sha256": "143839d8204878a1b2876eafc0a37b53d3efbd8cc21177444e2194bd5d115394",
+        "cell": "C31",
+        "imageId": "ID_65195CAD02324BF8BF5621195B473B09"
+      },
+      "mature": {
+        "path": "/art/items/image54.png",
+        "description": "Red Cabbage Stage 6.png",
+        "sha256": "23e334a2e46c200b69d11ef07cff614e0e0d33f40d4e5d8073a7322a47e4f511",
+        "cell": "D31",
+        "imageId": "ID_FA7B51A180264B76B7E08E08F96D7161"
+      }
+    },
+    {
+      "name": "杨桃",
+      "row": 32,
+      "item": {
+        "path": "/art/items/image55.png",
+        "description": "Starfruit.png",
+        "sha256": "ebf30d54305fe1e8aec960344992e679749ee8785a04886fe36224662dba30bd",
+        "cell": "C32",
+        "imageId": "ID_A0F5C5F8E8FC4113834458597EF1ABA0"
+      },
+      "mature": {
+        "path": "/art/items/image56.png",
+        "description": "Starfruit Stage 6.png",
+        "sha256": "5a1b7f49dae16ed1ebabba4d43b2f87c88b60b4a188dc28dc861fd58484183b8",
+        "cell": "D32",
+        "imageId": "ID_8B16FC0B57894F859D4B4A3AC6DEB2FD"
+      }
+    },
+    {
+      "name": "茄子",
+      "row": 33,
+      "item": {
+        "path": "/art/items/image57.png",
+        "description": "Eggplant.png",
+        "sha256": "6be3b3081726307bed72952a8f1c7e5f5ae50f7f85e14063ebf22c0ea4d2f615",
+        "cell": "C33",
+        "imageId": "ID_D7CDE2DEEDF8496DA21A2949F2FDB235"
+      },
+      "mature": {
+        "path": "/art/items/image58.png",
+        "description": "Eggplant Stage 6.png",
+        "sha256": "bace32e0b53b1980b78ff9ff2137b0830522d9653041af95ef2a64abc1156927",
+        "cell": "D33",
+        "imageId": "ID_5EDD7BA7ADE8435E8D7EB983F189B73B"
+      }
+    },
+    {
+      "name": "西蓝花",
+      "row": 34,
+      "item": {
+        "path": "/art/items/image59.png",
+        "description": "Broccoli.png",
+        "sha256": "ba8a38fbdb9eade043afd659ec3f372301aa0e541a9399da9d0cb939e5b51757",
+        "cell": "C34",
+        "imageId": "ID_435400E2C79149DCAA8ED43253138197"
+      },
+      "mature": {
+        "path": "/art/items/image60.png",
+        "description": "Broccoli Stage 5.png",
+        "sha256": "ea943a8ce19a3bc14bdfffaa5c94d04cdcf5ab7fd6b9cb18318a8ff4b1ec6eca",
+        "cell": "D34",
+        "imageId": "ID_E72EBE530BB54C059348A015FA74D22A"
+      }
+    },
+    {
+      "name": "蔓越莓",
+      "row": 35,
+      "item": {
+        "path": "/art/items/image61.png",
+        "description": "Cranberries.png",
+        "sha256": "32cd63453139cec4279fc51ec36bfe8b74114531b0668d9445d2ed8ad753296f",
+        "cell": "C35",
+        "imageId": "ID_81DF06F083A24D4890E46D35FE0C8661"
+      },
+      "mature": {
+        "path": "/art/items/image62.png",
+        "description": "Cranberry Stage 6.png",
+        "sha256": "cf50c968ab9262eee2cd722db6c2eed2cabe5bcb58d8760c2169a332922f34aa",
+        "cell": "D35",
+        "imageId": "ID_9F127A8BEAD54E278632E963EDFD8B82"
+      }
+    },
+    {
+      "name": "葡萄",
+      "row": 36,
+      "item": {
+        "path": "/art/items/image63.png",
+        "description": "Grape.png",
+        "sha256": "a232f4d35eb82251972973a3fd11288070fb07c378beb8feb973058b1e073903",
+        "cell": "C36",
+        "imageId": "ID_B8D309193C53493384B77505CD513B3B"
+      },
+      "mature": {
+        "path": "/art/items/image64.png",
+        "description": "Grape Stage 6.png",
+        "sha256": "38d50a8fdf3dad67f0773415ff2be6d4991bb98ecbfd2e295ea7510fb01b0cf8",
+        "cell": "D36",
+        "imageId": "ID_1917AFF233B6468097B7622B205526FE"
+      }
+    },
+    {
+      "name": "小白菜",
+      "row": 37,
+      "item": {
+        "path": "/art/items/image65.png",
+        "description": "Bok Choy.png",
+        "sha256": "be4171338a4a66b883781681f210efab05f5381b2e77c066cf5185d52872a6e5",
+        "cell": "C37",
+        "imageId": "ID_B0B92714E26642D181B2197501DE1A9D"
+      },
+      "mature": {
+        "path": "/art/items/image66.png",
+        "description": "Bok Choy Stage 5.png",
+        "sha256": "5cd84754b939745f66076e3ba6b3a46f7da99f6969a8bfff4561278adeefb6e5",
+        "cell": "D37",
+        "imageId": "ID_AE9D2391C66C4C47A03386562C340D04"
+      }
+    },
+    {
+      "name": "甜菜",
+      "row": 38,
+      "item": {
+        "path": "/art/items/image67.png",
+        "description": "Beet.png",
+        "sha256": "09fa0a46202971953bbb9aef46236e9adf699db50360784228b8f6e068190acd",
+        "cell": "C38",
+        "imageId": "ID_DDB473739BE347ECB018D5EE33C33D1B"
+      },
+      "mature": {
+        "path": "/art/items/image68.png",
+        "description": "Beet Stage 5.png",
+        "sha256": "a0c8e76c4533cf44d5baaf1276d0c7e95149836831897604f29c7748312be8bd",
+        "cell": "D38",
+        "imageId": "ID_3436B69C94B5428CAE87150AA1908FE0"
+      }
+    },
+    {
+      "name": "苋菜",
+      "row": 39,
+      "item": {
+        "path": "/art/items/image69.png",
+        "description": "Amaranth.png",
+        "sha256": "d10dfbcdf981b4eb6c27d3c8af613ede2b8fbdf7a307e56c176ac5ec6d6775f0",
+        "cell": "C39",
+        "imageId": "ID_2E21520B5D764011AD7CA338EC5A9664"
+      },
+      "mature": {
+        "path": "/art/items/image70.png",
+        "description": "Amaranth Stage 5.png",
+        "sha256": "99bb7dd4c949bc2e3325f1af33ef62e89907992a315a90de559f0de33d51723e",
+        "cell": "D39",
+        "imageId": "ID_AA4EA1BD73C748CD940C4C379009FBE2"
+      }
+    },
+    {
+      "name": "山药",
+      "row": 40,
+      "item": {
+        "path": "/art/items/image71.png",
+        "description": "Yam.png",
+        "sha256": "18dd281ee33af3e8357463c6660d568d3dcd0dea5f8e05712ad5fa133e92b343",
+        "cell": "C40",
+        "imageId": "ID_85CFF03BFBD44358B5F3EAF63632BC32"
+      },
+      "mature": {
+        "path": "/art/items/image72.png",
+        "description": "Yam Stage 5.png",
+        "sha256": "47c3626d721e8c00ebd3211c1a398d1a41f3f97181418eff1d7debdb56e14794",
+        "cell": "D40",
+        "imageId": "ID_57DE89FCAA854606BD0F1913109C2E7A"
+      }
+    },
+    {
+      "name": "洋蓟",
+      "row": 41,
+      "item": {
+        "path": "/art/items/image73.png",
+        "description": "Artichoke.png",
+        "sha256": "90b78c73ef0766c40897aeba4c8a49f24eadb036044542368b1a6e20be43762b",
+        "cell": "C41",
+        "imageId": "ID_AE3498A6B56742E19194EEACC8E67B17"
+      },
+      "mature": {
+        "path": "/art/items/image74.png",
+        "description": "Artichoke Stage 6.png",
+        "sha256": "6e64f85ac841c27f6a970a15ad96038f507748d354cd67265ce5376c3494d594",
+        "cell": "D41",
+        "imageId": "ID_25A2E494723A4370935C1056BB5969B7"
+      }
+    },
+    {
+      "name": "玫瑰仙子",
+      "row": 42,
+      "item": {
+        "path": "/art/items/image75.png",
+        "description": "Fairy Rose.png",
+        "sha256": "fed41acf7cdfd926692b555235bcd03af152627979d603d0a5907447f2603279",
+        "cell": "C42",
+        "imageId": "ID_C68BBC05BDD64515968464CF6F3DD22A"
+      },
+      "mature": {
+        "path": "/art/items/image76.png",
+        "description": "Fairy Rose Stage 5.png",
+        "sha256": "3fe9fdd89b3bf83fea8634e777172b234a59f184205b957d011b93a0fb3878af",
+        "cell": "D42",
+        "imageId": "ID_F962758DC5454DE9B463ABD3680918C8"
+      }
+    },
+    {
+      "name": "南瓜",
+      "row": 43,
+      "item": {
+        "path": "/art/items/image77.png",
+        "description": "Pumpkin.png",
+        "sha256": "872ecf6599d30bae81a4b98f3726598306561a3387912333842b6e6c7318a8b3",
+        "cell": "C43",
+        "imageId": "ID_6889EEBF2BE9499293F1FDB6714E8745"
+      },
+      "mature": {
+        "path": "/art/items/image78.png",
+        "description": "Pumpkin Stage 6.png",
+        "sha256": "273a3b44e1f8f53800890215c315bccb8b98345798c6d07405a90428bdfebfb7",
+        "cell": "D43",
+        "imageId": "ID_C59F25C848B247FBA57A544D1458502E"
+      }
+    },
+    {
+      "name": "宝石甜莓",
+      "row": 44,
+      "item": {
+        "path": "/art/items/image79.png",
+        "description": "Sweet Gem Berry.png",
+        "sha256": "70b6b77e1c19c091ee4cbfab668d527cd968ebaa1ed9a17bff0c47daa6c0505d",
+        "cell": "C44",
+        "imageId": "ID_BAB6C612C862448D85A02E4E249504A9"
+      },
+      "mature": {
+        "path": "/art/items/image80.png",
+        "description": "Sweet Gem Berry Stage 6.png",
+        "sha256": "7c3b42ec20d44788804a3cfaed20dce7509e13e681a18ab9923835716d0d817e",
+        "cell": "D44",
+        "imageId": "ID_C750969398EE488896AA6809A81AD230"
+      }
+    },
+    {
+      "name": "霜瓜",
+      "row": 45,
+      "item": {
+        "path": "/art/items/image81.png",
+        "description": "Powdermelon.png",
+        "sha256": "efec1b6cc9530690d072754d2e46afa6b1ff086463657408a571d99acafe9ed4",
+        "cell": "C45",
+        "imageId": "ID_92038862C31346EB89CAAD2030CE69BE"
+      },
+      "mature": {
+        "path": "/art/items/image82.png",
+        "description": "Powdermelon Stage 6.png",
+        "sha256": "c338764af557ccb87f97d52a45e2c40efe91d5e454be788a429e0c1f62cf0eec",
+        "cell": "D45",
+        "imageId": "ID_C3066124707C4242B027F648D8C2D3F6"
+      }
+    },
+    {
+      "name": "齐瓜",
+      "row": 46,
+      "item": {
+        "path": "/art/items/image83.png",
+        "description": "Qi Fruit.png",
+        "sha256": "314a531e4fba92bde7a4fc1357ce7f54125595a8a8e003aac4f0b37aaee2b9f8",
+        "cell": "C46",
+        "imageId": "ID_E827DC67757A46DF9328C19757534045"
+      },
+      "mature": {
+        "path": "/art/items/image84.png",
+        "description": "Qi Fruit Stage 5.png",
+        "sha256": "7646a267773c8c90c5b1375cdbc6281cf7b6edc871bf9ca30bc3ab90b149d68f",
+        "cell": "D46",
+        "imageId": "ID_43C90512E18242EBB17723AE5FAF66C8"
+      }
+    },
+    {
+      "name": "茶叶",
+      "row": 47,
+      "item": {
+        "path": "/art/items/image85.png",
+        "description": "Tea Leaves.png",
+        "sha256": "8702e4f2ace51d1f8ece4d8109c001a690b327d0257cba382651bc2ee1377725",
+        "cell": "C47",
+        "imageId": "ID_04F9898C9ED74CDB9F991A32A16B679F"
+      },
+      "mature": {
+        "path": "/art/items/image86.png",
+        "description": "Tea Stage 4.png",
+        "sha256": "e4688459b96e3e2e61d6b73cc874a18c9b204badb0f5a7df744c7792d5f67ac6",
+        "cell": "D47",
+        "imageId": "ID_CD4AF8FD0A834610B5B4F3AEF51043D8"
+      }
+    },
+    {
+      "name": "仙人掌果子",
+      "row": 48,
+      "item": {
+        "path": "/art/items/image87.png",
+        "description": "Cactus Fruit.png",
+        "sha256": "8eccead50056574266c486c1151c1f63a44246dddcb4fbe19a3f47f5215b82ad",
+        "cell": "C48",
+        "imageId": "ID_836A98B79E264213BD0C9D331FF514A5"
+      },
+      "mature": {
+        "path": "/art/items/image88.png",
+        "description": "Cactus Stage 6.png",
+        "sha256": "c266d60de1b76a5abda74aa728f942d6738039273f99dd57f75bc449d571cd08",
+        "cell": "D48",
+        "imageId": "ID_3C086EF5E8434A87AEFC4216B800AEE3"
+      }
+    }
+  ],
+  "fish": [
+    {
+      "name": "鲤鱼",
+      "row": 4,
+      "image": {
+        "path": "/art/items/image89.png",
+        "description": "Carp.png",
+        "sha256": "1e6581133cc9ac56d8de19ac2705702f9a6b65fd89faee6020febce6864779b9",
+        "cell": "H4",
+        "imageId": "ID_A598A75CF69E4D75B6C8912F7E9E02D5"
+      }
+    },
+    {
+      "name": "鲱鱼",
+      "row": 5,
+      "image": {
+        "path": "/art/items/image90.png",
+        "description": "Herring.png",
+        "sha256": "418bc81c075a2ad1ba9e2c83277b35916757fc905914f5bc1b373fb8c0d7eeb5",
+        "cell": "H5",
+        "imageId": "ID_D908C7AA08854496AC32A646528E9784"
+      }
+    },
+    {
+      "name": "小嘴鲈鱼",
+      "row": 6,
+      "image": {
+        "path": "/art/items/image91.png",
+        "description": "Smallmouth Bass.png",
+        "sha256": "6ae6004be885982f4be0e5659ce441377322b69e1258b9b64346f50cf93aae87",
+        "cell": "H6",
+        "imageId": "ID_10772E2FD4774EF984B5B2D69808806D"
+      }
+    },
+    {
+      "name": "鳀鱼",
+      "row": 7,
+      "image": {
+        "path": "/art/items/image92.png",
+        "description": "Anchovy.png",
+        "sha256": "1e0c965ccdf3178291225c393344c9dda3a3c3a6f40c4b0b9626d6ba34a55396",
+        "cell": "H7",
+        "imageId": "ID_B9091557A6E54F7C9CE718C175E7151E"
+      }
+    },
+    {
+      "name": "太阳鱼",
+      "row": 8,
+      "image": {
+        "path": "/art/items/image93.png",
+        "description": "Sunfish.png",
+        "sha256": "ed513f18487a99fce675f82ba01e6663347490b60ca6278d068380551d5b9e20",
+        "cell": "H8",
+        "imageId": "ID_B4B68D5D39B6496DBE2FBCD8A46641E3"
+      }
+    },
+    {
+      "name": "沙丁鱼",
+      "row": 9,
+      "image": {
+        "path": "/art/items/image94.png",
+        "description": "Sardine.png",
+        "sha256": "915e615259807dbc71f5c699e8ea514467dd888d5a296a837b0c4a02fe862210",
+        "cell": "H9",
+        "imageId": "ID_DCDFE5B6EFBF44719505BBA994AC2B00"
+      }
+    },
+    {
+      "name": "鲷鱼",
+      "row": 10,
+      "image": {
+        "path": "/art/items/image95.png",
+        "description": "Bream.png",
+        "sha256": "72168eca31641248eac9ea9ce6f76b0fc1931a9641a4a339edce1a48a2030d2f",
+        "cell": "H10",
+        "imageId": "ID_B80C9A2F26B840F58DE7C9FFC50DBEAF"
+      }
+    },
+    {
+      "name": "鲢鱼",
+      "row": 11,
+      "image": {
+        "path": "/art/items/image96.png",
+        "description": "Chub.png",
+        "sha256": "6f0457f0205edb5cb5006c0d2bd202f5ee535eb63907bded94075cad4895b272",
+        "cell": "H11",
+        "imageId": "ID_25054E88291740318317427A3D4DF5D5"
+      }
+    },
+    {
+      "name": "西鲱",
+      "row": 12,
+      "image": {
+        "path": "/art/items/image97.png",
+        "description": "Shad.png",
+        "sha256": "a74aa445a58fae0560cea32cca5715bbb80e5c6c976dfc0cfdeac22a7b02e127",
+        "cell": "H12",
+        "imageId": "ID_6D75C5424D964A9BBE5C38BC46488350"
+      }
+    },
+    {
+      "name": "大头鱼",
+      "row": 13,
+      "image": {
+        "path": "/art/items/image98.png",
+        "description": "Bullhead.png",
+        "sha256": "ba81e02b1cd30a0b995f5f7a676a494f5b9edaefb626ac9691b6a225946cf7fd",
+        "cell": "H13",
+        "imageId": "ID_85932D46153643E390EAD65A51D27BE8"
+      }
+    },
+    {
+      "name": "大嘴鲈鱼",
+      "row": 14,
+      "image": {
+        "path": "/art/items/image99.png",
+        "description": "Largemouth Bass.png",
+        "sha256": "a4a9b09813ebb4114f57ce8d18eae6f8af54262f8444e63e75edf29c4f9ec406",
+        "cell": "H14",
+        "imageId": "ID_30E2A3060D63406FACDCC238DAE14E33"
+      }
+    },
+    {
+      "name": "鬼鱼",
+      "row": 15,
+      "image": {
+        "path": "/art/items/image100.png",
+        "description": "Ghostfish.png",
+        "sha256": "6bf4e24268459ae7337086bb9994c2a4c6e44d155d90d0ff94bd9bb0324dfdde",
+        "cell": "H15",
+        "imageId": "ID_0879DC5C5B2B4A8EB5EA57BD821F7E39"
+      }
+    },
+    {
+      "name": "大比目鱼",
+      "row": 16,
+      "image": {
+        "path": "/art/items/image116.png",
+        "description": "Halibut.png",
+        "sha256": "d87b440921781f5efc574ec1e162d83afd9f141e517ed3a8f7250cd03ff3aaf3",
+        "cell": "H16",
+        "imageId": "ID_2FBFD430E4444C22A7F7D51D67D747E1"
+      }
+    },
+    {
+      "name": "木跃鱼",
+      "row": 17,
+      "image": {
+        "path": "/art/items/image117.png",
+        "description": "Woodskip.png",
+        "sha256": "a14294812fe18a591787395ce39eb519948cd9993ba8e8006cd03c120f3742fd",
+        "cell": "H17",
+        "imageId": "ID_0FA6727B81534BE0817F0D4390BDD37A"
+      }
+    },
+    {
+      "name": "比目鱼",
+      "row": 18,
+      "image": {
+        "path": "/art/items/image118.png",
+        "description": "Flounder.png",
+        "sha256": "f99b26e2f8dc497adc50532591d27c99871c8c50d22b28cf21d61df924ed3de1",
+        "cell": "H18",
+        "imageId": "ID_1457FDFAF5B3460BBBABEE2CB360F2E0"
+      }
+    },
+    {
+      "name": "传说之鱼",
+      "row": 19,
+      "image": {
+        "path": "/art/items/image119.png",
+        "description": "Legend.png",
+        "sha256": "469652443e4c50292313e9540bb72b4d34fce1f4a76540ec56577bb86cc8ad82",
+        "cell": "H19",
+        "imageId": "ID_71FD8ABD5F3A41E495B0DB3D412CE6BF"
+      }
+    }
+  ],
+  "animals": [
+    {
+      "name": "鸡",
+      "row": 4,
+      "image": {
+        "path": "/art/items/image101.gif",
+        "description": "White Chicken.gif",
+        "sha256": "f0fae3abf44868bdb958897033d165de945494b9a19e88e42f6f32fc69823491",
+        "cell": "L4",
+        "imageId": "ID_EBB69E81A2E2480DBEE36BD0ED7A8971"
+      },
+      "product": {
+        "name": "鸡蛋",
+        "image": {
+          "path": "/art/items/image109.png",
+          "description": "Large Egg.png",
+          "sha256": "f711d8a933c2b18dbcecdb83511e240b7e6c85c5b7824f9e9c23bf86bbedbb28",
+          "cell": "N4",
+          "imageId": "ID_F4DCD862260B4C5BA3E5E5573C3D8FEA"
+        }
+      }
+    },
+    {
+      "name": "鸭",
+      "row": 5,
+      "image": {
+        "path": "/art/items/image102.gif",
+        "description": "Duck.gif",
+        "sha256": "112568a9c98836543bfc7d55778a6c9668c75e25e6d1698397567834e61c6902",
+        "cell": "L5",
+        "imageId": "ID_A7D5E9B6D80C4D0AB520DD22D72C3DF9"
+      },
+      "product": {
+        "name": "鸭蛋",
+        "image": {
+          "path": "/art/items/image110.png",
+          "description": "Duck Egg.png",
+          "sha256": "2b244e3e581b5a34c847b9e2d88f3d723272219687b55fea5b088372b974d4c0",
+          "cell": "N5",
+          "imageId": "ID_3C1669C8953E480B94091E45A4D6A10F"
+        }
+      }
+    },
+    {
+      "name": "兔子",
+      "row": 6,
+      "image": {
+        "path": "/art/items/image103.gif",
+        "description": "Rabbit.gif",
+        "sha256": "51b39217ab78b0effc80eea17c596c78432656c0f68b7610ae0e15584a5ec221",
+        "cell": "L6",
+        "imageId": "ID_B3343B5B3FFB49AD8B5B21424AD642C9"
+      },
+      "product": {
+        "name": "兔子的脚",
+        "image": {
+          "path": "/art/items/image111.png",
+          "description": "Rabbit's Foot.png",
+          "sha256": "c9b26f8bde1720911fc620c5063112ceddff156897b3086ebc0811fc26e8fcb4",
+          "cell": "N6",
+          "imageId": "ID_4CDC901EFD9640F881D5FCEE0425FBF9"
+        }
+      }
+    },
+    {
+      "name": "牛",
+      "row": 7,
+      "image": {
+        "path": "/art/items/image104.gif",
+        "description": "White Cow.gif",
+        "sha256": "d665fe918162a7ca6957bc461001f5f4434035c8f2167cc4c44600338f0594e9",
+        "cell": "L7",
+        "imageId": "ID_E6919F9EA73946D9A2C9ACAD072AEAA2"
+      },
+      "product": {
+        "name": "牛奶",
+        "image": {
+          "path": "/art/items/image112.png",
+          "description": "Milk.png",
+          "sha256": "4eda2896efaade62e1ca4612ded0eac9aa35ba21866795612dde23eae1088ae8",
+          "cell": "N7",
+          "imageId": "ID_42BCDE50002A4C2EB33DC7BBC4D91A3F"
+        }
+      }
+    },
+    {
+      "name": "绵羊",
+      "row": 8,
+      "image": {
+        "path": "/art/items/image105.gif",
+        "description": "Sheep.gif",
+        "sha256": "47e56dd635a4d35b49ece201c64b9b78676bcfc6b23fc18af7a5a5d333c51933",
+        "cell": "L8",
+        "imageId": "ID_3B47A30F7B6040C1AD0954F4DE8DD7C9"
+      },
+      "product": {
+        "name": "羊毛",
+        "image": {
+          "path": "/art/items/image113.png",
+          "description": "Wool.png",
+          "sha256": "c02a01088ef9871a4fde784bebcae4b8644279c4eff98a9d2cf97af4be351580",
+          "cell": "N8",
+          "imageId": "ID_163ED63FE3624E76B52B1FB3658EE092"
+        }
+      }
+    },
+    {
+      "name": "猪",
+      "row": 9,
+      "image": {
+        "path": "/art/items/image106.gif",
+        "description": "Pig.gif",
+        "sha256": "1f3e3370e814b7ddf02b92165eae04b5f01036db525188b2f938c16d0b823836",
+        "cell": "L9",
+        "imageId": "ID_FB5A07472B574189BC00DA3D661AB200"
+      },
+      "product": {
+        "name": "松露",
+        "image": {
+          "path": "/art/items/image114.png",
+          "description": "Truffle.png",
+          "sha256": "a1d4bf45ae42fabb04bbacb626cb5a38d1595171b580271a10c9cf012c4efcf0",
+          "cell": "N9",
+          "imageId": "ID_89C66C1BE90E4642A2E11BC0CE0DEF69"
+        }
+      }
+    },
+    {
+      "name": "虚空鸡",
+      "row": 10,
+      "image": {
+        "path": "/art/items/image107.gif",
+        "description": "Void Chicken.gif",
+        "sha256": "81d7c528938cc2861f10948b743f8bd8ae35c57552eb79dd67df03e799a39c40",
+        "cell": "L10",
+        "imageId": "ID_D779585E986F457E87C995D1F1D03993"
+      },
+      "product": {
+        "name": "虚空蛋",
+        "image": {
+          "path": "/art/items/image115.png",
+          "description": "Void Egg.png",
+          "sha256": "8e7903385eaa1805cda5d9bf36802fac293e79c7804457dc97970d27f4f7a22c",
+          "cell": "N10",
+          "imageId": "ID_6C31CE9A39794C0DB5C41B4B1FA995B6"
+        }
+      }
+    }
+  ]
+}
