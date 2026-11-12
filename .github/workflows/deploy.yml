@@ -1,0 +1,61 @@
+name: Deploy to GitHub Pages
+
+# 推送到 main 自动构建并发布；也可在 Actions 页面手动 Re-run。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        env:
+          # Pages 路径 = 仓库名 (user.github.io/<repo>/).
+          # 如果你把 Pages 挂到用户组织页 (<user>.github.io)，改成 VITE_BASE=/
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      # GitHub Pages 原生不带 SPA rewrite。这个项目没有前端路由，
+      # 正常情况不会遇到 404；但加一份 404.html 保险起见，
+      # 把误访问路径重定向回首页，同时保留路径参数（用 hash 做伪路由也安全）。
+      - name: Add SPA fallback (404 → index.html)
+        run: cp dist/index.html dist/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
