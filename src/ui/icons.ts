@@ -38,5 +38,13 @@ const shapes: Record<string, string> = {
 };
 export function icon(name: string, size = 24) {
   const asset = itemAssets[name as keyof typeof itemAssets];
-  if (asset) return `<img class="icon bitmap-icon icon-${name}" src="${asset}" width="${size}" height="${size}" alt="" aria-hidden="true" draggable="false">`;
+  if (asset) {
+    // item-assets.json 里写的是绝对路径如 "/art/items/foo.png"，Vite import JSON
+    // 不会 transform 字符串，所以运行时必须自己拼上 base。
+    // import.meta.env.BASE_URL 在 Vite 构建时被内联成常量（如 "/MyStarFarm/"），
+    // 但 node+tsx 测试环境没有这层，所以 fallback 到 "/" 保持原行为。
+    const base = (import.meta as any).env?.BASE_URL ?? '/';
+    const src = `${base}${asset.replace(/^\//, '')}`;
+    return `<img class="icon bitmap-icon icon-${name}" src="${src}" width="${size}" height="${size}" alt="" aria-hidden="true" draggable="false">`;
+  }
   return `<svg class="icon icon-${name}" width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true" shape-rendering="crispEdges">${shapes[name] || shapes.star}</svg>`; }
