@@ -1593,7 +1593,6 @@
   "timing": {
     "offlineCap": 14400000,
     "autosave": 15000,
-    "fishCooldown": 60000,
     "petCooldown": 3600000,
     "offlineNoticeMin": 60000
   },

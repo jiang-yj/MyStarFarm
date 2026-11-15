@@ -71,6 +71,11 @@ html,body,.game-frame,.modal-body{overflow-anchor:none}
 .seed-tray-heading strong{display:flex;align-items:center;gap:5px;font-size:13px}
 .seed-tray-heading small{display:block;line-height:1.6;font-size:9px;color:#70634d;margin-top:4px}
 .seed-tray-heading>.btn{font-size:10px;white-space:nowrap;padding:5px;flex-shrink:0}
+.seed-tray-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.seed-tray-actions>.btn{font-size:10px;white-space:nowrap;padding:6px 8px;min-height:36px;gap:4px}
+.seed-tray-actions>.btn>.icon{width:16px;height:16px}
+.seed-tray-actions>.btn.quiet{padding:6px 7px}
+@media(max-width:360px){.seed-tray-actions{gap:4px}.seed-tray-actions>.btn{font-size:9px;padding:5px 6px;min-height:34px}}
 .seed-rail{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;padding:3px 2px 7px;touch-action:pan-x;scrollbar-width:thin;scrollbar-color:#b7a36c #f1e4c5;overscroll-behavior-x:contain;user-select:none;-webkit-user-select:none}
 .seed-card{flex:0 0 94px;min-width:94px;min-height:102px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:#f6e8c7;border:1px solid #c3aa7a;border-bottom-width:3px;border-radius:6px;color:#59472e;touch-action:pan-x;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
 .seed-card.active{background:#e5edc9;border:2px solid #6e8c46;box-shadow:inset 0 0 0 2px #f8f3d0}
@@ -98,7 +103,7 @@ html,body,.game-frame,.modal-body{overflow-anchor:none}
 
 /* Show transient status inside the header without changing scene geometry. */
 .game-header>.toast-region{
-  position:absolute;top:0;bottom:0;left:52px;right:52px;
+  position:absolute;top:0;bottom:0;left:84px;right:50px;
   width:auto;max-width:none;transform:none;display:flex;
   justify-content:center;align-items:stretch;gap:0;padding:6px 0;
   overflow:hidden;
@@ -106,7 +111,6 @@ html,body,.game-frame,.modal-body{overflow-anchor:none}
 .game-header>.toast-region:empty,.welcome-host>.toast-region:empty{display:none}
 .game-header:has(>.toast-region:not(:empty))>.farm-name,
 .game-header:has(>.toast-region:not(:empty))>strong,
-.game-header:has(>.toast-region:not(:empty))>.back,
 .game-header:has(>.toast-region:not(:empty))>.currency{visibility:hidden}
 .game-header>.toast-region>.toast{
   width:100%;min-width:0;display:flex;align-items:center;justify-content:center;
@@ -184,3 +188,12 @@ html,body,.game-frame,.modal-body{overflow-anchor:none}
 .pond-scene .pond-fishing:hover:not(:disabled){transform:translate(-50%,-1px)}
 .pond-scene .pond-fishing:active:not(:disabled){transform:translate(-50%,1px)}
 .pond-panel .fish-list{margin:10px 0 0}
+
+/* Ranch selection: a golden ring, glow and caret make the chosen animal obvious. */
+.animal{transition:transform .18s ease}
+.animal.chosen{z-index:3;border-color:transparent;background:radial-gradient(ellipse at 50% 62%,#fff7c9e6,#ffe98f33 62%,transparent 74%);box-shadow:none;animation:chosen-lift 1.6s ease-in-out infinite}
+.animal.chosen:before{content:'';position:absolute;inset:2px 6px;border:2px solid #ffdf76;border-radius:50%;box-shadow:0 0 0 2px #fff7cfb8,0 0 16px 4px #ffd860a6;pointer-events:none}
+.animal.chosen:after{content:'▼';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);font-size:10px;color:#ffe694;text-shadow:0 1px 2px #7a5c1d,0 0 6px #ffdf70;pointer-events:none;animation:selected-caret 1.2s ease-in-out infinite}
+.animal.chosen>.icon{transform:translateY(-3px) scale(1.12);filter:drop-shadow(0 3px 0 #7b5e2a55) drop-shadow(0 0 7px #fff0a3cc)}
+@keyframes chosen-lift{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,-54%)}}
+@keyframes selected-caret{0%,100%{opacity:.55;transform:translate(-50%,0)}50%{opacity:1;transform:translate(-50%,3px)}}

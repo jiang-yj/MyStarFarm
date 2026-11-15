@@ -32,11 +32,14 @@ test('upgraded tool scope and watering mastery affect gameplay', () => {
   const s = farm(); s.player.skills.till = 15; assert.equal(g.till(s, 0).ok, true); assert.equal(s.farm.tiles.filter(t => t.state === 'tilled').length, 6);
   s.player.skills.water = 45; s.player.tools.push('watering'); g.plant(s, 10, 'carrot', NOW); assert.equal(s.farm.tiles[10].readyAt, NOW + 486000);
 });
-test('animal feed, pet cooldown, quality and one output per feed', () => {
-  const s = farm(); assert.equal(g.collectAnimals(s, NOW).ok, true); assert.equal(g.amount(s, 'egg'), 1);
-  assert.equal(g.collectAnimals(s, NOW).ok, false); assert.equal(g.feedAnimal(s, 1, NOW).ok, true);
-  assert.equal(g.feedAnimal(s, 1, NOW).ok, false); assert.equal(g.amount(s, 'hay'), 23);
-  assert.equal(g.petAnimal(s, 1, NOW).ok, true); assert.equal(g.petAnimal(s, 1, NOW + 1).ok, false);
+test('animal feed and pet apply to every animal, with cooldown and quality', () => {
+  const s = farm(); assert.equal(g.buy(s, 'duck', 1, NOW).ok, true);
+  assert.equal(g.collectAnimals(s, NOW).ok, true); assert.equal(g.amount(s, 'egg'), 1);
+  assert.equal(g.collectAnimals(s, NOW).ok, false);
+  assert.equal(g.feedAnimals(s, NOW).ok, true); assert.equal(g.amount(s, 'hay'), 22);
+  assert.equal(g.feedAnimals(s, NOW).ok, false);
+  assert.equal(g.petAnimals(s, NOW).ok, true); assert.ok(s.ranch.animals.every(a => a.affection === 1));
+  assert.equal(g.petAnimals(s, NOW + 1).ok, false);
   s.ranch.animals[0].affection = 7; assert.equal(g.collectAnimals(s, NOW + 3600000).ok, true); assert.equal(s.inventory['egg:gold'], 1);
 });
 test('fish must be stocked and fed, respect capacity, and net once', () => {
@@ -81,9 +84,10 @@ test('backward device clock preserves remaining growth instead of generating rew
   assert.equal(report.clockBack, true); assert.equal(Object.keys(report.items).length, 0); assert.equal(save.farm.tiles[13].readyAt! - (NOW - 3600000), original - NOW);
   assert.doesNotThrow(() => validateSave(save));
 });
-test('fishing reward enforces cooldown and one grant per completed attempt', () => {
+test('fishing grants a catch on every completed attempt without cooldown', () => {
   const s = farm(); assert.equal(g.fishingReward(s, NOW, 0.1).ok, true); assert.equal(g.amount(s, 'herring'), 1);
-  assert.equal(g.fishingReward(s, NOW + 1, 0.3).ok, false); assert.equal(g.fishingReward(s, NOW + 60000, 0.3).ok, true); assert.equal(g.amount(s, 'sunfish'), 1);
+  assert.equal(g.fishingReward(s, NOW, 0.3).ok, true); assert.equal(g.amount(s, 'sunfish'), 1);
+  assert.equal(s.pond.lastFishing, NOW);
 });
 test('negative quantities, unavailable currency and capacity cannot bypass purchases', () => {
   const s = farm(); const gold = s.player.gold;
@@ -207,6 +211,20 @@ test('batch planting uses the normal tool and skill timing and survives storage 
   assert.deepEqual(repo.load(s.id).farm, s.farm);
 });
 
+test('one-click planting fills empty plots in order until the selected seed runs out', () => {
+  const s = farm(); s.inventory.carrotSeed = 2;
+  assert.equal(g.plantAll(s, 'carrot', NOW).ok, true);
+  assert.equal(g.amount(s, 'carrotSeed'), 0);
+  assert.equal(s.farm.tiles[10].crop, 'carrot'); assert.equal(s.farm.tiles[16].crop, 'carrot');
+  assert.equal(s.farm.tiles[22].state, 'tilled');
+  assert.equal(g.plantAll(s, 'carrot', NOW).ok, false);
+  const full = farm(); full.inventory.carrotSeed = 10;
+  assert.equal(g.plantAll(full, 'carrot', NOW).ok, true);
+  assert.equal(g.amount(full, 'carrotSeed'), 7);
+  assert.equal(full.farm.tiles.filter(t => t.state === 'tilled').length, 0);
+  assert.equal(g.plantAll(full, 'carrot', NOW).ok, false);
+});
+
 test('maximum purchase respects gold, transaction limit and remaining capacity', () => {
   const s = farm(); s.player.gold = 913;
   assert.equal(g.maxPurchase(s, 'coffeeSeed'), 45);
@@ -221,16 +239,22 @@ test('maximum purchase respects gold, transaction limit and remaining capacity',
   assert.equal(g.maxPurchase(s, 'unknown'), 0);
 });
 
+test('seed purchase quantity defaults to empty tilled plots, capped by gold', () => {
+  const s = farm(); assert.equal(g.emptyPlots(s), 3);
+  assert.equal(g.defaultBuyQty(s, 'carrotSeed'), 3);
+  assert.equal(g.defaultBuyQty(s, 'hay'), 1);
+  s.player.gold = 40; assert.equal(g.defaultBuyQty(s, 'carrotSeed'), 2);
+  s.player.gold = 100000; s.farm.tiles.forEach(t => { if (t.state === 'tilled') t.state = 'planted'; });
+  assert.equal(g.defaultBuyQty(s, 'carrotSeed'), 1);
+});
+
 test('successful fishing records species, weight, totals and best weight once and persists', () => {
   const s = farm();
   assert.ok(g.fishingReward(s, NOW, 0, [0.5, 0.5, 0.5]).ok);
   const caught = s.fishingJournal.recent[0];
   assert.equal(caught.species, 'commonCarp'); assert.equal(caught.weightJin, 6.25); assert.equal(caught.caughtAt, NOW);
   assert.equal(g.amount(s, 'commonCarp'), 1);
-  const before = structuredClone(s);
-  assert.equal(g.fishingReward(s, NOW + 1, 0, [1, 1, 1]).ok, false);
-  assert.deepEqual(s, before);
-  assert.ok(g.fishingReward(s, NOW + g.catalog.timing.fishCooldown, 0, [1, 1, 1]).ok);
+  assert.ok(g.fishingReward(s, NOW + 1000, 0, [1, 1, 1]).ok);
   assert.equal(s.fishingJournal.totalCaught, 2);
   assert.deepEqual(s.fishingJournal.species.commonCarp, { count: 2, bestWeightJin: 12 });
   assert.deepEqual(validateSave(JSON.parse(JSON.stringify(s))), s);

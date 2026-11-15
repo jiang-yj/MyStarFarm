@@ -216,7 +216,7 @@ function animateFishing() {
   animation = requestAnimationFrame(animateFishing);
 }
 function hitFishing() {
-  if (!v.save || platform.now() - v.save.pond.lastFishing < game.catalog.timing.fishCooldown || performance.now() - lastHit < 250) return;
+  if (!v.save || performance.now() - lastHit < 250) return;
   lastHit = performance.now();
   const frame = currentFishingFrame();
   if (frame.pointer >= frame.left && frame.pointer <= frame.left + frame.width) { v.fishSuccess++; platform.vibrate(); platform.audio.play('click'); }
@@ -369,14 +369,15 @@ root.addEventListener('click', e => {
     case 'move-tile': moveTile(Number(value)); break;
     case 'till': transact(s => game.till(s, v.tile)); break;
     case 'plant': transact(s => game.plant(s, v.tile, value as CropId, now), true); break;
+    case 'plant-all': if (v.selectedSeed) transact(s => game.plantAll(s, v.selectedSeed!, now)); break;
     case 'water': transact(s => game.water(s, v.tile, now)); break;
     case 'water-all': transact(s => game.water(s, 'all', now)); break;
     case 'harvest': transact(s => game.harvest(s, v.tile, now)); break;
     case 'collect-migrated': transact(s => game.collectMigratedCrops(s, now)); break;
     case 'harvest-all': transact(s => game.harvest(s, 'all', now)); break;
     case 'animal': v.animal = Number(value); render(); break;
-    case 'feed-animal': transact(s => game.feedAnimal(s, Number(value), now)); break;
-    case 'pet': transact(s => game.petAnimal(s, Number(value), now)); break;
+    case 'feed-animals': transact(s => game.feedAnimals(s, now)); break;
+    case 'pet-animals': transact(s => game.petAnimals(s, now)); break;
     case 'collect-animal': e.stopPropagation(); transact(s => game.collectAnimals(s, now, Number(value))); break;
     case 'collect-animals': transact(s => game.collectAnimals(s, now)); break;
     case 'feed-fish': transact(s => game.feedFish(s, now)); break;
@@ -392,10 +393,10 @@ root.addEventListener('click', e => {
     case 'sell-one': transact(s => game.sell(s, value, 1)); break;
     case 'sell-all': transact(s => game.sell(s, value, s.inventory[value] || 0)); break;
     case 'use-item': if (value.endsWith('Seed')) { v.scene = 'farm'; v.modal = null; v.tile = v.save!.farm.tiles.findIndex(t => t.state === 'tilled'); if (v.tile < 0) v.tile = 0; v.selectedSeed = Object.entries(game.catalog.crops).find(([, crop]) => crop.seed === value)?.[0] as CropId || null; render(); toast('已选中种子，点击空地或长按种子拖过农田播种'); } else { v.scene = 'pond'; openModal('stock'); } break;
-    case 'shop': v.shopCategory = value; v.shopMode = 'buy'; v.buyId = shopItems(value)[0].id; v.qty = 1; openModal('shop'); break;
-    case 'shop-category': v.shopCategory = value; v.buyId = shopItems(value)[0].id; v.qty = 1; refreshModal(); break;
+    case 'shop': v.shopCategory = value; v.shopMode = 'buy'; v.buyId = shopItems(value)[0].id; v.qty = game.defaultBuyQty(v.save!, v.buyId); openModal('shop'); break;
+    case 'shop-category': v.shopCategory = value; v.buyId = shopItems(value)[0].id; v.qty = game.defaultBuyQty(v.save!, v.buyId); refreshModal(); break;
     case 'shop-mode': v.shopMode = value; refreshModal(); break;
-    case 'buy-select': v.buyId = value; v.qty = 1; refreshModal(); break;
+    case 'buy-select': v.buyId = value; v.qty = game.defaultBuyQty(v.save!, v.buyId); refreshModal(); break;
     case 'qty': v.qty = Math.max(1, Math.min(game.maxPurchase(v.save!, v.buyId), v.qty + Number(value))); refreshModal(); break;
     case 'qty-max': v.qty = Math.max(1, game.maxPurchase(v.save!, v.buyId)); refreshModal(); break;
     case 'buy': transact(s => game.buy(s, value, v.qty, now)); break;

@@ -125,6 +125,12 @@ export function maxPurchase(s: SaveData, id: string): number {
   const capacity = animal ? data.economy.ranchCapacity - s.ranch.animals.length : data.economy.maxInventory - amount(s, id);
   return Math.max(0, Math.min(99, Math.floor(s.player.gold / price), capacity));
 }
+export const emptyPlots = (s: SaveData) => s.farm.tiles.filter(t => t.state === 'tilled').length;
+/** Seeds default to the number of empty tilled plots, capped by gold and stock space. */
+export function defaultBuyQty(s: SaveData, id: string): number {
+  const isSeed = Object.values(data.crops).some(c => c.seed === id && c.price > 0);
+  return Math.max(1, Math.min(maxPurchase(s, id), isSeed ? emptyPlots(s) : 1));
+}
 export function buy(s: SaveData, id: string, qty: number, now: number): Result {
   if (!Number.isInteger(qty) || qty < 1 || qty > 99) return result(false, '请选择 1–99 件');
   const crop = Object.values(data.crops).find(c => c.seed === id && c.price > 0);
@@ -154,6 +160,23 @@ export function petAnimal(s: SaveData, id: number, now: number): Result {
   const a = s.ranch.animals.find(a => a.id === id); if (!a) return result(false, '请选择动物');
   if (now - a.lastPet < data.timing.petCooldown) return result(false, '刚刚抚摸过，1 小时后再来陪它吧');
   a.lastPet = now; a.affection = Math.min(10, a.affection + data.progression.petAffection); return result(true, '它很喜欢你，好感度 +1');
+}
+export function feedAnimals(s: SaveData, now: number): Result {
+  if (!s.ranch.animals.length) return result(false, '牧场里还没有小伙伴');
+  let fed = 0; let hungry = 0;
+  for (const a of s.ranch.animals) {
+    if (a.readyAt !== null) continue;
+    if (!feedAnimal(s, a.id, now).ok) { hungry++; continue; }
+    fed++;
+  }
+  if (!fed) return result(false, hungry ? '饲料不足，去商店补充吧' : '小伙伴们都吃饱了');
+  return result(true, `喂饱了 ${fed} 只小伙伴${hungry ? `，还有 ${hungry} 只饲料不足` : ''}`);
+}
+export function petAnimals(s: SaveData, now: number): Result {
+  if (!s.ranch.animals.length) return result(false, '牧场里还没有小伙伴');
+  let count = 0;
+  for (const a of s.ranch.animals) if (petAnimal(s, a.id, now).ok) count++;
+  return result(count > 0, count ? `抚摸了 ${count} 只小伙伴，好感度 +1` : '都刚刚抚摸过，1 小时后再来陪它们吧');
 }
 const productKey = (a: SaveData['ranch']['animals'][number]) => data.animals[a.type].product + (a.affection >= data.progression.qualityGoldAt ? ':gold' : a.affection >= data.progression.qualitySilverAt ? ':silver' : '');
 export function collectAnimals(s: SaveData, now: number, id?: number): Result {
@@ -194,7 +217,6 @@ export function exchange(s: SaveData, id: string): Result {
   return result(true, `兑换成功：${item.name}`);
 }
 export function fishingReward(s: SaveData, now: number, roll: number, weightRolls = [Math.random(), Math.random(), Math.random()]): Result {
-  if (now - s.pond.lastFishing < data.timing.fishCooldown) return result(false, '水面还没平静，稍等片刻再钓吧');
   const totalWeight = data.fishingPool.reduce((sum, fish) => sum + fish.weight, 0);
   let cursor = Math.max(0, Math.min(0.999999, roll)) * totalWeight;
   const type = (data.fishingPool.find(fish => { cursor -= fish.weight; return cursor < 0; })?.id || 'commonCarp') as FishType;
@@ -258,4 +280,16 @@ export function plantBatch(s: SaveData, indices: number[], crop: CropId, now: nu
     if (plant(s, i, crop, now).ok) count++;
   }
   return result(count > 0, count ? `播种${data.crops[crop].name} ${count} 块，消耗 ${count} 颗种子` : '未播种：请拖过空地并确认种子充足');
+}
+/** Plant the chosen seed into every empty plot in order until the seed stock runs out. */
+export function plantAll(s: SaveData, crop: CropId, now: number): Result {
+  if (!Object.hasOwn(data.crops, crop)) return result(false, '请选择有效的种子');
+  const indices = s.farm.tiles.flatMap((t, i) => t.state === 'tilled' ? [i] : []);
+  if (!indices.length) return result(false, '没有空余土地，先开垦一块吧');
+  let count = 0;
+  for (const i of indices) {
+    if (!amount(s, data.crops[crop].seed)) break;
+    if (plant(s, i, crop, now).ok) count++;
+  }
+  return result(count > 0, count ? `一键播种${data.crops[crop].name} ${count} 块，消耗 ${count} 颗种子` : '种子不足，去商店补充吧');
 }
